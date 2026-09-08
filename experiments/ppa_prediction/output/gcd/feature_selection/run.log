@@ -1,0 +1,809 @@
+Building wide feature tables from existing JSON logs...
+floorplan: 27 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_floorplan.csv
+placement: 95 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_placement.csv
+cts: 44 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_cts.csv
+routing: 67 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_routing.csv
+
+=== Forward Feature Selection — Preflight ===
+Trajectories: 1000 total
+Train: 20  |  Test: 980 (untouched during FFS)
+Inner split: 15 train / 5 validation per seed
+Inner seeds: [42, 43, 44]
+
+Inner validation trajectory IDs per seed:
+  seed 42: ['traj_sweep_002', 'traj_sweep_053', 'traj_sweep_193', 'traj_sweep_600', 'traj_sweep_686']
+  seed 43: ['traj_sweep_088', 'traj_sweep_1002', 'traj_sweep_249', 'traj_sweep_452', 'traj_sweep_864']
+  seed 44: ['traj_sweep_069', 'traj_sweep_088', 'traj_sweep_249', 'traj_sweep_452', 'traj_sweep_600']
+
+Candidate features per stage (after dropping train-constant):
+
+  floorplan: 19 features
+    - 2_1_floorplan__floorplan__design__instance__area
+    - 2_1_floorplan__floorplan__design__instance__area__stdcell
+    - 2_1_floorplan__floorplan__design__instance__utilization
+    - 2_1_floorplan__floorplan__design__instance__utilization__stdcell
+    - 2_1_floorplan__floorplan__flow__warnings__count
+    - 2_1_floorplan__floorplan__flow__warnings__type_count
+    - 2_1_floorplan__floorplan__power__internal__total
+    - 2_1_floorplan__floorplan__power__leakage__total
+    - 2_1_floorplan__floorplan__power__switching__total
+    - 2_1_floorplan__floorplan__power__total
+    - 2_1_floorplan__floorplan__timing__fmax
+    - 2_1_floorplan__floorplan__timing__fmax__clock:core_clock
+    - 2_1_floorplan__floorplan__timing__hold__ws
+    - 2_1_floorplan__floorplan__timing__setup__tns
+    - 2_1_floorplan__floorplan__timing__setup__ws
+    - param:CLK_PERIOD
+    - param:CORE_UTILIZATION
+    - param:CTS_CLUSTER_SIZE
+    - param:PLACE_DENSITY_LB_ADDON
+
+  placement: 75 features
+    - 3_3_place_gp__globalplace__design__instance__area
+    - 3_3_place_gp__globalplace__design__instance__area__stdcell
+    - 3_3_place_gp__globalplace__design__instance__count
+    - 3_3_place_gp__globalplace__design__instance__count__stdcell
+    - 3_3_place_gp__globalplace__design__instance__utilization
+    - 3_3_place_gp__globalplace__design__instance__utilization__stdcell
+    - 3_3_place_gp__globalplace__design__nets
+    - 3_3_place_gp__globalplace__gpl__area__final
+    - 3_3_place_gp__globalplace__gpl__area__final__percent
+    - 3_3_place_gp__globalplace__gpl__area__original
+    - 3_3_place_gp__globalplace__gpl__area__timing_delta
+    - 3_3_place_gp__globalplace__gpl__area__timing_delta__percent
+    - 3_3_place_gp__globalplace__gpl__convergence__iteration
+    - 3_3_place_gp__globalplace__gpl__routability__congestion
+    - 3_3_place_gp__globalplace__gpl__routability__iteration
+    - 3_3_place_gp__globalplace__power__internal__total
+    - 3_3_place_gp__globalplace__power__leakage__total
+    - 3_3_place_gp__globalplace__power__switching__total
+    - 3_3_place_gp__globalplace__power__total
+    - 3_3_place_gp__globalplace__route__wirelength__estimated
+    - 3_3_place_gp__globalplace__timing__fmax
+    - 3_3_place_gp__globalplace__timing__fmax__clock:core_clock
+    - 3_3_place_gp__globalplace__timing__hold__ws
+    - 3_3_place_gp__globalplace__timing__setup__tns
+    - 3_3_place_gp__globalplace__timing__setup__ws
+    - 3_4_place_resized__placeopt__design__instance__area
+    - 3_4_place_resized__placeopt__design__instance__area__stdcell
+    - 3_4_place_resized__placeopt__design__instance__count
+    - 3_4_place_resized__placeopt__design__instance__count__stdcell
+    - 3_4_place_resized__placeopt__design__instance__utilization
+    - 3_4_place_resized__placeopt__design__instance__utilization__stdcell
+    - 3_4_place_resized__placeopt__design__nets
+    - 3_4_place_resized__placeopt__power__internal__total
+    - 3_4_place_resized__placeopt__power__leakage__total
+    - 3_4_place_resized__placeopt__power__switching__total
+    - 3_4_place_resized__placeopt__power__total
+    - 3_4_place_resized__placeopt__timing__drv__max_cap_limit
+    - 3_4_place_resized__placeopt__timing__drv__max_slew_limit
+    - 3_4_place_resized__placeopt__timing__drv__setup_violation_count
+    - 3_4_place_resized__placeopt__timing__fmax
+    - 3_4_place_resized__placeopt__timing__fmax__clock:core_clock
+    - 3_4_place_resized__placeopt__timing__hold__ws
+    - 3_4_place_resized__placeopt__timing__setup__tns
+    - 3_4_place_resized__placeopt__timing__setup__ws
+    - 3_5_place_dp__detailedplace__design__instance__area
+    - 3_5_place_dp__detailedplace__design__instance__area__stdcell
+    - 3_5_place_dp__detailedplace__design__instance__count
+    - 3_5_place_dp__detailedplace__design__instance__count__stdcell
+    - 3_5_place_dp__detailedplace__design__instance__displacement__max
+    - 3_5_place_dp__detailedplace__design__instance__displacement__mean
+    - 3_5_place_dp__detailedplace__design__instance__displacement__total
+    - 3_5_place_dp__detailedplace__design__instance__utilization
+    - 3_5_place_dp__detailedplace__design__instance__utilization__stdcell
+    - 3_5_place_dp__detailedplace__design__nets
+    - 3_5_place_dp__detailedplace__dpl__hpwl__delta
+    - 3_5_place_dp__detailedplace__dpl__hpwl__delta__percent
+    - 3_5_place_dp__detailedplace__negotiation__converge__phase_1__iteration
+    - 3_5_place_dp__detailedplace__power__internal__total
+    - 3_5_place_dp__detailedplace__power__leakage__total
+    - 3_5_place_dp__detailedplace__power__switching__total
+    - 3_5_place_dp__detailedplace__power__total
+    - 3_5_place_dp__detailedplace__route__wirelength__estimated
+    - 3_5_place_dp__detailedplace__timing__drv__max_cap_limit
+    - 3_5_place_dp__detailedplace__timing__drv__max_slew_limit
+    - 3_5_place_dp__detailedplace__timing__drv__setup_violation_count
+    - 3_5_place_dp__detailedplace__timing__fmax
+    - 3_5_place_dp__detailedplace__timing__fmax__clock:core_clock
+    - 3_5_place_dp__detailedplace__timing__hold__ws
+    - 3_5_place_dp__detailedplace__timing__setup__tns
+    - 3_5_place_dp__detailedplace__timing__setup__ws
+    - 3_5_place_dp__detailedplace__utilization__before__dpl
+    - param:CLK_PERIOD
+    - param:CORE_UTILIZATION
+    - param:CTS_CLUSTER_SIZE
+    - param:PLACE_DENSITY_LB_ADDON
+
+  cts: 36 features
+    - 4_1_cts__cts__clock__skew__hold
+    - 4_1_cts__cts__clock__skew__setup
+    - 4_1_cts__cts__design__instance__area
+    - 4_1_cts__cts__design__instance__area__stdcell
+    - 4_1_cts__cts__design__instance__count
+    - 4_1_cts__cts__design__instance__count__setup_buffer
+    - 4_1_cts__cts__design__instance__count__stdcell
+    - 4_1_cts__cts__design__instance__displacement__max
+    - 4_1_cts__cts__design__instance__displacement__mean
+    - 4_1_cts__cts__design__instance__displacement__total
+    - 4_1_cts__cts__design__instance__utilization
+    - 4_1_cts__cts__design__instance__utilization__stdcell
+    - 4_1_cts__cts__design__nets
+    - 4_1_cts__cts__dpl__hpwl__delta
+    - 4_1_cts__cts__dpl__hpwl__delta__percent
+    - 4_1_cts__cts__flow__warnings__count
+    - 4_1_cts__cts__flow__warnings__type_count
+    - 4_1_cts__cts__negotiation__converge__phase_1__iteration
+    - 4_1_cts__cts__power__internal__total
+    - 4_1_cts__cts__power__leakage__total
+    - 4_1_cts__cts__power__switching__total
+    - 4_1_cts__cts__power__total
+    - 4_1_cts__cts__route__wirelength__estimated
+    - 4_1_cts__cts__timing__drv__max_cap_limit
+    - 4_1_cts__cts__timing__drv__max_slew_limit
+    - 4_1_cts__cts__timing__drv__setup_violation_count
+    - 4_1_cts__cts__timing__fmax
+    - 4_1_cts__cts__timing__fmax__clock:core_clock
+    - 4_1_cts__cts__timing__hold__ws
+    - 4_1_cts__cts__timing__setup__tns
+    - 4_1_cts__cts__timing__setup__ws
+    - 4_1_cts__cts__utilization__before__dpl
+    - param:CLK_PERIOD
+    - param:CORE_UTILIZATION
+    - param:CTS_CLUSTER_SIZE
+    - param:PLACE_DENSITY_LB_ADDON
+
+  routing: 58 features
+    - 5_1_grt__globalroute__clock__skew__hold
+    - 5_1_grt__globalroute__clock__skew__setup
+    - 5_1_grt__globalroute__design__instance__area
+    - 5_1_grt__globalroute__design__instance__area__stdcell
+    - 5_1_grt__globalroute__design__instance__count
+    - 5_1_grt__globalroute__design__instance__count__setup_buffer
+    - 5_1_grt__globalroute__design__instance__count__stdcell
+    - 5_1_grt__globalroute__design__instance__displacement__max
+    - 5_1_grt__globalroute__design__instance__displacement__mean
+    - 5_1_grt__globalroute__design__instance__displacement__total
+    - 5_1_grt__globalroute__design__instance__utilization
+    - 5_1_grt__globalroute__design__instance__utilization__stdcell
+    - 5_1_grt__globalroute__design__nets
+    - 5_1_grt__globalroute__dpl__hpwl__delta
+    - 5_1_grt__globalroute__dpl__hpwl__delta__percent
+    - 5_1_grt__globalroute__flow__warnings__count
+    - 5_1_grt__globalroute__flow__warnings__type_count
+    - 5_1_grt__globalroute__global_route__fastroute__congestion_rsmt_s
+    - 5_1_grt__globalroute__global_route__fastroute__finalization_s
+    - 5_1_grt__globalroute__global_route__fastroute__initial_rsmt_s
+    - 5_1_grt__globalroute__global_route__fastroute__monotonic_s
+    - 5_1_grt__globalroute__global_route__fastroute__new_route_l_s
+    - 5_1_grt__globalroute__global_route__fastroute__overflow_iterations_s
+    - 5_1_grt__globalroute__global_route__fastroute__route_l_s
+    - 5_1_grt__globalroute__global_route__fastroute__route_z_s
+    - 5_1_grt__globalroute__global_route__fastroute__spiral_s
+    - 5_1_grt__globalroute__global_route__vias
+    - 5_1_grt__globalroute__global_route__wirelength
+    - 5_1_grt__globalroute__power__internal__total
+    - 5_1_grt__globalroute__power__leakage__total
+    - 5_1_grt__globalroute__power__switching__total
+    - 5_1_grt__globalroute__power__total
+    - 5_1_grt__globalroute__route__net
+    - 5_1_grt__globalroute__route__wirelength__estimated
+    - 5_1_grt__globalroute__timing__drv__max_cap_limit
+    - 5_1_grt__globalroute__timing__drv__max_slew_limit
+    - 5_1_grt__globalroute__timing__drv__setup_violation_count
+    - 5_1_grt__globalroute__timing__fmax
+    - 5_1_grt__globalroute__timing__fmax__clock:core_clock
+    - 5_1_grt__globalroute__timing__hold__ws
+    - 5_1_grt__globalroute__timing__setup__tns
+    - 5_1_grt__globalroute__timing__setup__ws
+    - 5_1_grt__globalroute__utilization__before__dpl
+    - 5_2_route__detailedroute__route__drc_errors__iter:0
+    - 5_2_route__detailedroute__route__drc_errors__iter:1
+    - 5_2_route__detailedroute__route__drc_errors__iter:2
+    - 5_2_route__detailedroute__route__net
+    - 5_2_route__detailedroute__route__vias
+    - 5_2_route__detailedroute__route__vias__singlecut
+    - 5_2_route__detailedroute__route__wirelength
+    - 5_2_route__detailedroute__route__wirelength__iter:0
+    - 5_2_route__detailedroute__route__wirelength__iter:1
+    - 5_2_route__detailedroute__route__wirelength__iter:2
+    - 5_2_route__detailedroute__route__wirelength__iter:3
+    - param:CLK_PERIOD
+    - param:CORE_UTILIZATION
+    - param:CTS_CLUSTER_SIZE
+    - param:PLACE_DENSITY_LB_ADDON
+
+Expected validation model fits: 48789
+  per stage (×3 targets × 3 seeds): {'floorplan': 1719, 'placement': 25659, 'cts': 6003, 'routing': 15408}
+
+SHAP/ablation comparison inputs: /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/full/shap (exists=True)
+
+[FFS] floorplan → power (19 candidates)
+  iter   1: +2_1_floorplan__floorplan__power__internal__total... val R²=0.9779±0.0087 (1 feats)
+  iter   2: +2_1_floorplan__floorplan__timing__hold__ws... val R²=0.9842±0.0046 (2 feats)
+  iter   3: +2_1_floorplan__floorplan__design__instance__area... val R²=0.9838±0.0036 (3 feats)
+  iter   4: +2_1_floorplan__floorplan__design__instance__area__stdcell... val R²=0.9856±0.0033 (4 feats)
+  iter   5: +2_1_floorplan__floorplan__design__instance__utilization... val R²=0.9782±0.0073 (5 feats)
+  iter   6: +2_1_floorplan__floorplan__design__instance__utilization__std... val R²=0.9789±0.0076 (6 feats)
+  iter   7: +2_1_floorplan__floorplan__flow__warnings__count... val R²=0.9839±0.0036 (7 feats)
+  iter   8: +2_1_floorplan__floorplan__flow__warnings__type_count... val R²=0.9827±0.0045 (8 feats)
+  iter   9: +2_1_floorplan__floorplan__power__leakage__total... val R²=0.9837±0.0039 (9 feats)
+  iter  10: +2_1_floorplan__floorplan__power__switching__total... val R²=0.9789±0.0076 (10 feats)
+  iter  11: +2_1_floorplan__floorplan__power__total... val R²=0.9778±0.0085 (11 feats)
+  iter  12: +2_1_floorplan__floorplan__timing__fmax... val R²=0.9781±0.0090 (12 feats)
+  iter  13: +2_1_floorplan__floorplan__timing__fmax__clock:core_clock... val R²=0.9812±0.0065 (13 feats)
+  iter  14: +2_1_floorplan__floorplan__timing__setup__tns... val R²=0.9822±0.0052 (14 feats)
+  iter  15: +2_1_floorplan__floorplan__timing__setup__ws... val R²=0.9805±0.0062 (15 feats)
+  iter  16: +param:CLK_PERIOD... val R²=0.9787±0.0080 (16 feats)
+  iter  17: +param:CORE_UTILIZATION... val R²=0.9793±0.0064 (17 feats)
+  iter  18: +param:CTS_CLUSTER_SIZE... val R²=0.9798±0.0063 (18 feats)
+  iter  19: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9782±0.0078 (19 feats)
+
+[FFS] floorplan → fmax (19 candidates)
+  iter   1: +2_1_floorplan__floorplan__power__internal__total... val R²=0.9184±0.0175 (1 feats)
+  iter   2: +2_1_floorplan__floorplan__timing__setup__ws... val R²=0.9751±0.0165 (2 feats)
+  iter   3: +2_1_floorplan__floorplan__design__instance__area... val R²=0.9737±0.0160 (3 feats)
+  iter   4: +2_1_floorplan__floorplan__design__instance__area__stdcell... val R²=0.9744±0.0172 (4 feats)
+  iter   5: +2_1_floorplan__floorplan__design__instance__utilization... val R²=0.9587±0.0126 (5 feats)
+  iter   6: +2_1_floorplan__floorplan__design__instance__utilization__std... val R²=0.9443±0.0157 (6 feats)
+  iter   7: +2_1_floorplan__floorplan__flow__warnings__count... val R²=0.9680±0.0182 (7 feats)
+  iter   8: +2_1_floorplan__floorplan__flow__warnings__type_count... val R²=0.9644±0.0192 (8 feats)
+  iter   9: +2_1_floorplan__floorplan__power__leakage__total... val R²=0.9672±0.0229 (9 feats)
+  iter  10: +2_1_floorplan__floorplan__power__switching__total... val R²=0.9411±0.0112 (10 feats)
+  iter  11: +param:CTS_CLUSTER_SIZE... val R²=0.9365±0.0143 (11 feats)
+  iter  12: +2_1_floorplan__floorplan__power__total... val R²=0.9403±0.0138 (12 feats)
+  iter  13: +2_1_floorplan__floorplan__timing__fmax... val R²=0.9548±0.0118 (13 feats)
+  iter  14: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9534±0.0138 (14 feats)
+  iter  15: +2_1_floorplan__floorplan__timing__fmax__clock:core_clock... val R²=0.9435±0.0052 (15 feats)
+  iter  16: +2_1_floorplan__floorplan__timing__hold__ws... val R²=0.9524±0.0142 (16 feats)
+  iter  17: +2_1_floorplan__floorplan__timing__setup__tns... val R²=0.9544±0.0106 (17 feats)
+  iter  18: +param:CLK_PERIOD... val R²=0.9581±0.0136 (18 feats)
+  iter  19: +param:CORE_UTILIZATION... val R²=0.8738±0.0465 (19 feats)
+
+[FFS] floorplan → area (19 candidates)
+  iter   1: +2_1_floorplan__floorplan__timing__hold__ws... val R²=0.9882±0.0080 (1 feats)
+  iter   2: +2_1_floorplan__floorplan__power__internal__total... val R²=0.9903±0.0087 (2 feats)
+  iter   3: +param:CORE_UTILIZATION... val R²=0.9910±0.0063 (3 feats)
+  iter   4: +2_1_floorplan__floorplan__power__switching__total... val R²=0.9884±0.0088 (4 feats)
+  iter   5: +2_1_floorplan__floorplan__design__instance__area... val R²=0.9906±0.0052 (5 feats)
+  iter   6: +2_1_floorplan__floorplan__design__instance__area__stdcell... val R²=0.9891±0.0042 (6 feats)
+  iter   7: +2_1_floorplan__floorplan__design__instance__utilization... val R²=0.9904±0.0050 (7 feats)
+  iter   8: +2_1_floorplan__floorplan__design__instance__utilization__std... val R²=0.9888±0.0046 (8 feats)
+  iter   9: +2_1_floorplan__floorplan__flow__warnings__count... val R²=0.9897±0.0056 (9 feats)
+  iter  10: +2_1_floorplan__floorplan__flow__warnings__type_count... val R²=0.9897±0.0041 (10 feats)
+  iter  11: +2_1_floorplan__floorplan__power__leakage__total... val R²=0.9904±0.0041 (11 feats)
+  iter  12: +2_1_floorplan__floorplan__power__total... val R²=0.9900±0.0039 (12 feats)
+  iter  13: +2_1_floorplan__floorplan__timing__fmax... val R²=0.9905±0.0041 (13 feats)
+  iter  14: +2_1_floorplan__floorplan__timing__fmax__clock:core_clock... val R²=0.9905±0.0048 (14 feats)
+  iter  15: +2_1_floorplan__floorplan__timing__setup__tns... val R²=0.9892±0.0044 (15 feats)
+  iter  16: +param:CTS_CLUSTER_SIZE... val R²=0.9903±0.0040 (16 feats)
+  iter  17: +2_1_floorplan__floorplan__timing__setup__ws... val R²=0.9915±0.0049 (17 feats)
+  iter  18: +param:CLK_PERIOD... val R²=0.9902±0.0042 (18 feats)
+  iter  19: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9897±0.0039 (19 feats)
+
+[FFS] placement → power (75 candidates)
+  iter   1: +3_3_place_gp__globalplace__power__internal__total... val R²=0.9779±0.0087 (1 feats)
+  iter   2: +3_3_place_gp__globalplace__timing__setup__tns... val R²=0.9842±0.0046 (2 feats)
+  iter   3: +3_3_place_gp__globalplace__design__instance__area... val R²=0.9838±0.0036 (3 feats)
+  iter   4: +3_3_place_gp__globalplace__power__leakage__total... val R²=0.9860±0.0028 (4 feats)
+  iter   5: +3_3_place_gp__globalplace__design__instance__area__stdcell... val R²=0.9782±0.0073 (5 feats)
+  iter   6: +3_3_place_gp__globalplace__design__instance__utilization... val R²=0.9789±0.0076 (6 feats)
+  iter   7: +3_3_place_gp__globalplace__design__instance__utilization__st... val R²=0.9839±0.0036 (7 feats)
+  iter   8: +3_3_place_gp__globalplace__gpl__area__final... val R²=0.9827±0.0045 (8 feats)
+  iter   9: +3_3_place_gp__globalplace__gpl__area__original... val R²=0.9837±0.0039 (9 feats)
+  iter  10: +3_3_place_gp__globalplace__design__instance__count... val R²=0.9789±0.0076 (10 feats)
+  iter  11: +3_3_place_gp__globalplace__design__instance__count__stdcell... val R²=0.9770±0.0085 (11 feats)
+  iter  12: +3_3_place_gp__globalplace__design__nets... val R²=0.9779±0.0092 (12 feats)
+  iter  13: +3_3_place_gp__globalplace__gpl__area__final__percent... val R²=0.9805±0.0067 (13 feats)
+  iter  14: +3_3_place_gp__globalplace__gpl__area__timing_delta... val R²=0.9816±0.0054 (14 feats)
+  iter  15: +3_3_place_gp__globalplace__gpl__area__timing_delta__percent... val R²=0.9802±0.0064 (15 feats)
+  iter  16: +3_3_place_gp__globalplace__gpl__convergence__iteration... val R²=0.9793±0.0074 (16 feats)
+  iter  17: +3_3_place_gp__globalplace__gpl__routability__congestion... val R²=0.9791±0.0066 (17 feats)
+  iter  18: +3_3_place_gp__globalplace__gpl__routability__iteration... val R²=0.9798±0.0063 (18 feats)
+  iter  19: +3_3_place_gp__globalplace__power__switching__total... val R²=0.9780±0.0081 (19 feats)
+  iter  20: +3_3_place_gp__globalplace__power__total... val R²=0.9829±0.0049 (20 feats)
+  iter  21: +3_3_place_gp__globalplace__route__wirelength__estimated... val R²=0.9818±0.0045 (21 feats)
+  iter  22: +3_3_place_gp__globalplace__timing__fmax... val R²=0.9825±0.0051 (22 feats)
+  iter  23: +3_3_place_gp__globalplace__timing__fmax__clock:core_clock... val R²=0.9796±0.0067 (23 feats)
+  iter  24: +3_3_place_gp__globalplace__timing__hold__ws... val R²=0.9842±0.0038 (24 feats)
+  iter  25: +3_3_place_gp__globalplace__timing__setup__ws... val R²=0.9807±0.0068 (25 feats)
+  iter  26: +3_4_place_resized__placeopt__design__instance__area... val R²=0.9807±0.0057 (26 feats)
+  iter  27: +3_4_place_resized__placeopt__design__instance__area__stdcell... val R²=0.9804±0.0065 (27 feats)
+  iter  28: +3_4_place_resized__placeopt__design__instance__count... val R²=0.9785±0.0080 (28 feats)
+  iter  29: +3_4_place_resized__placeopt__design__instance__count__stdcel... val R²=0.9812±0.0052 (29 feats)
+  iter  30: +3_4_place_resized__placeopt__design__instance__utilization... val R²=0.9783±0.0084 (30 feats)
+  iter  31: +3_4_place_resized__placeopt__design__instance__utilization__... val R²=0.9849±0.0027 (31 feats)
+  iter  32: +3_4_place_resized__placeopt__design__nets... val R²=0.9783±0.0084 (32 feats)
+  iter  33: +3_4_place_resized__placeopt__power__internal__total... val R²=0.9845±0.0025 (33 feats)
+  iter  34: +3_4_place_resized__placeopt__power__leakage__total... val R²=0.9781±0.0085 (34 feats)
+  iter  35: +3_4_place_resized__placeopt__power__switching__total... val R²=0.9826±0.0048 (35 feats)
+  iter  36: +3_4_place_resized__placeopt__power__total... val R²=0.9779±0.0092 (36 feats)
+  iter  37: +3_4_place_resized__placeopt__timing__drv__max_cap_limit... val R²=0.9795±0.0073 (37 feats)
+  iter  38: +3_4_place_resized__placeopt__timing__drv__max_slew_limit... val R²=0.9796±0.0075 (38 feats)
+  iter  39: +3_4_place_resized__placeopt__timing__drv__setup_violation_co... val R²=0.9775±0.0081 (39 feats)
+  iter  40: +3_4_place_resized__placeopt__timing__fmax... val R²=0.9804±0.0068 (40 feats)
+  iter  41: +3_4_place_resized__placeopt__timing__fmax__clock:core_clock... val R²=0.9815±0.0056 (41 feats)
+  iter  42: +3_4_place_resized__placeopt__timing__hold__ws... val R²=0.9812±0.0062 (42 feats)
+  iter  43: +3_4_place_resized__placeopt__timing__setup__tns... val R²=0.9785±0.0080 (43 feats)
+  iter  44: +3_4_place_resized__placeopt__timing__setup__ws... val R²=0.9789±0.0066 (44 feats)
+  iter  45: +3_5_place_dp__detailedplace__design__instance__area... val R²=0.9777±0.0089 (45 feats)
+  iter  46: +3_5_place_dp__detailedplace__design__instance__area__stdcell... val R²=0.9809±0.0054 (46 feats)
+  iter  47: +3_5_place_dp__detailedplace__design__instance__count... val R²=0.9777±0.0089 (47 feats)
+  iter  48: +3_5_place_dp__detailedplace__design__instance__count__stdcel... val R²=0.9801±0.0060 (48 feats)
+  iter  49: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9799±0.0072 (49 feats)
+  iter  50: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9805±0.0071 (50 feats)
+  iter  51: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9794±0.0067 (51 feats)
+  iter  52: +3_5_place_dp__detailedplace__design__instance__utilization... val R²=0.9804±0.0070 (52 feats)
+  iter  53: +3_5_place_dp__detailedplace__design__instance__utilization__... val R²=0.9794±0.0067 (53 feats)
+  iter  54: +3_5_place_dp__detailedplace__design__nets... val R²=0.9818±0.0067 (54 feats)
+  iter  55: +3_5_place_dp__detailedplace__dpl__hpwl__delta... val R²=0.9780±0.0094 (55 feats)
+  iter  56: +3_5_place_dp__detailedplace__dpl__hpwl__delta__percent... val R²=0.9813±0.0059 (56 feats)
+  iter  57: +3_5_place_dp__detailedplace__negotiation__converge__phase_1_... val R²=0.9815±0.0057 (57 feats)
+  iter  58: +3_5_place_dp__detailedplace__power__internal__total... val R²=0.9824±0.0049 (58 feats)
+  iter  59: +3_5_place_dp__detailedplace__power__leakage__total... val R²=0.9815±0.0057 (59 feats)
+  iter  60: +3_5_place_dp__detailedplace__power__switching__total... val R²=0.9846±0.0036 (60 feats)
+  iter  61: +3_5_place_dp__detailedplace__power__total... val R²=0.9817±0.0057 (61 feats)
+  iter  62: +3_5_place_dp__detailedplace__route__wirelength__estimated... val R²=0.9846±0.0036 (62 feats)
+  iter  63: +3_5_place_dp__detailedplace__timing__drv__max_cap_limit... val R²=0.9832±0.0049 (63 feats)
+  iter  64: +3_5_place_dp__detailedplace__timing__drv__max_slew_limit... val R²=0.9848±0.0039 (64 feats)
+  iter  65: +3_5_place_dp__detailedplace__timing__drv__setup_violation_co... val R²=0.9829±0.0039 (65 feats)
+  iter  66: +3_5_place_dp__detailedplace__timing__fmax... val R²=0.9814±0.0064 (66 feats)
+  iter  67: +3_5_place_dp__detailedplace__timing__fmax__clock:core_clock... val R²=0.9829±0.0039 (67 feats)
+  iter  68: +3_5_place_dp__detailedplace__timing__hold__ws... val R²=0.9799±0.0072 (68 feats)
+  iter  69: +3_5_place_dp__detailedplace__timing__setup__tns... val R²=0.9816±0.0053 (69 feats)
+  iter  70: +3_5_place_dp__detailedplace__timing__setup__ws... val R²=0.9794±0.0075 (70 feats)
+  iter  71: +3_5_place_dp__detailedplace__utilization__before__dpl... val R²=0.9795±0.0065 (71 feats)
+  iter  72: +param:CLK_PERIOD... val R²=0.9794±0.0075 (72 feats)
+  iter  73: +param:CORE_UTILIZATION... val R²=0.9784±0.0083 (73 feats)
+  iter  74: +param:CTS_CLUSTER_SIZE... val R²=0.9800±0.0064 (74 feats)
+  iter  75: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9784±0.0083 (75 feats)
+
+[FFS] placement → fmax (75 candidates)
+  iter   1: +3_3_place_gp__globalplace__power__internal__total... val R²=0.9184±0.0175 (1 feats)
+  iter   2: +3_3_place_gp__globalplace__timing__setup__ws... val R²=0.9751±0.0165 (2 feats)
+  iter   3: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9784±0.0149 (3 feats)
+  iter   4: +3_3_place_gp__globalplace__design__instance__count... val R²=0.9844±0.0129 (4 feats)
+  iter   5: +3_5_place_dp__detailedplace__timing__drv__max_cap_limit... val R²=0.9735±0.0157 (5 feats)
+  iter   6: +3_5_place_dp__detailedplace__timing__fmax... val R²=0.9677±0.0178 (6 feats)
+  iter   7: +3_5_place_dp__detailedplace__dpl__hpwl__delta... val R²=0.9863±0.0148 (7 feats)
+  iter   8: +3_3_place_gp__globalplace__gpl__routability__congestion... val R²=0.9763±0.0216 (8 feats)
+  iter   9: +3_5_place_dp__detailedplace__timing__hold__ws... val R²=0.9825±0.0190 (9 feats)
+  iter  10: +3_4_place_resized__placeopt__timing__drv__max_slew_limit... val R²=0.9642±0.0108 (10 feats)
+  iter  11: +3_5_place_dp__detailedplace__timing__fmax__clock:core_clock... val R²=0.9633±0.0121 (11 feats)
+  iter  12: +3_5_place_dp__detailedplace__negotiation__converge__phase_1_... val R²=0.9617±0.0123 (12 feats)
+  iter  13: +3_5_place_dp__detailedplace__dpl__hpwl__delta__percent... val R²=0.9780±0.0135 (13 feats)
+  iter  14: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9695±0.0124 (14 feats)
+  iter  15: +3_3_place_gp__globalplace__design__instance__area... val R²=0.9667±0.0087 (15 feats)
+  iter  16: +3_3_place_gp__globalplace__design__instance__count__stdcell... val R²=0.9741±0.0143 (16 feats)
+  iter  17: +3_3_place_gp__globalplace__timing__hold__ws... val R²=0.9731±0.0130 (17 feats)
+  iter  18: +3_3_place_gp__globalplace__route__wirelength__estimated... val R²=0.9725±0.0194 (18 feats)
+  iter  19: +3_3_place_gp__globalplace__design__instance__area__stdcell... val R²=0.9614±0.0132 (19 feats)
+  iter  20: +3_3_place_gp__globalplace__gpl__convergence__iteration... val R²=0.9761±0.0183 (20 feats)
+  iter  21: +3_3_place_gp__globalplace__design__instance__utilization... val R²=0.9807±0.0168 (21 feats)
+  iter  22: +3_5_place_dp__detailedplace__route__wirelength__estimated... val R²=0.9766±0.0175 (22 feats)
+  iter  23: +3_3_place_gp__globalplace__design__nets... val R²=0.9678±0.0108 (23 feats)
+  iter  24: +3_3_place_gp__globalplace__design__instance__utilization__st... val R²=0.9758±0.0167 (24 feats)
+  iter  25: +3_3_place_gp__globalplace__gpl__area__final... val R²=0.9788±0.0129 (25 feats)
+  iter  26: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9823±0.0120 (26 feats)
+  iter  27: +3_5_place_dp__detailedplace__timing__drv__max_slew_limit... val R²=0.9824±0.0148 (27 feats)
+  iter  28: +param:CORE_UTILIZATION... val R²=0.9671±0.0144 (28 feats)
+  iter  29: +3_3_place_gp__globalplace__gpl__area__final__percent... val R²=0.9530±0.0104 (29 feats)
+  iter  30: +3_3_place_gp__globalplace__gpl__routability__iteration... val R²=0.9600±0.0116 (30 feats)
+  iter  31: +3_3_place_gp__globalplace__gpl__area__original... val R²=0.9723±0.0177 (31 feats)
+  iter  32: +3_3_place_gp__globalplace__gpl__area__timing_delta... val R²=0.9604±0.0113 (32 feats)
+  iter  33: +3_3_place_gp__globalplace__gpl__area__timing_delta__percent... val R²=0.9747±0.0153 (33 feats)
+  iter  34: +3_3_place_gp__globalplace__power__leakage__total... val R²=0.9727±0.0192 (34 feats)
+  iter  35: +3_3_place_gp__globalplace__power__switching__total... val R²=0.9672±0.0102 (35 feats)
+  iter  36: +3_3_place_gp__globalplace__power__total... val R²=0.9534±0.0100 (36 feats)
+  iter  37: +3_3_place_gp__globalplace__timing__fmax... val R²=0.9690±0.0148 (37 feats)
+  iter  38: +3_3_place_gp__globalplace__timing__fmax__clock:core_clock... val R²=0.9676±0.0182 (38 feats)
+  iter  39: +3_3_place_gp__globalplace__timing__setup__tns... val R²=0.9719±0.0094 (39 feats)
+  iter  40: +3_4_place_resized__placeopt__design__instance__area... val R²=0.9745±0.0187 (40 feats)
+  iter  41: +3_4_place_resized__placeopt__design__instance__area__stdcell... val R²=0.9751±0.0133 (41 feats)
+  iter  42: +3_4_place_resized__placeopt__design__instance__count... val R²=0.9813±0.0147 (42 feats)
+  iter  43: +3_4_place_resized__placeopt__design__instance__count__stdcel... val R²=0.9681±0.0130 (43 feats)
+  iter  44: +3_4_place_resized__placeopt__design__instance__utilization... val R²=0.9739±0.0105 (44 feats)
+  iter  45: +3_4_place_resized__placeopt__timing__hold__ws... val R²=0.9568±0.0100 (45 feats)
+  iter  46: +3_4_place_resized__placeopt__design__instance__utilization__... val R²=0.9787±0.0109 (46 feats)
+  iter  47: +3_4_place_resized__placeopt__design__nets... val R²=0.9585±0.0087 (47 feats)
+  iter  48: +3_4_place_resized__placeopt__power__internal__total... val R²=0.9774±0.0113 (48 feats)
+  iter  49: +3_4_place_resized__placeopt__power__leakage__total... val R²=0.9592±0.0086 (49 feats)
+  iter  50: +3_4_place_resized__placeopt__power__switching__total... val R²=0.9690±0.0081 (50 feats)
+  iter  51: +3_4_place_resized__placeopt__power__total... val R²=0.9737±0.0083 (51 feats)
+  iter  52: +3_4_place_resized__placeopt__timing__drv__setup_violation_co... val R²=0.9641±0.0068 (52 feats)
+  iter  53: +3_4_place_resized__placeopt__timing__fmax... val R²=0.9713±0.0076 (53 feats)
+  iter  54: +3_4_place_resized__placeopt__timing__fmax__clock:core_clock... val R²=0.9727±0.0101 (54 feats)
+  iter  55: +3_4_place_resized__placeopt__timing__setup__tns... val R²=0.9622±0.0072 (55 feats)
+  iter  56: +3_4_place_resized__placeopt__timing__setup__ws... val R²=0.9746±0.0128 (56 feats)
+  iter  57: +3_5_place_dp__detailedplace__design__instance__area... val R²=0.9404±0.0152 (57 feats)
+  iter  58: +3_5_place_dp__detailedplace__design__instance__area__stdcell... val R²=0.9778±0.0161 (58 feats)
+  iter  59: +3_5_place_dp__detailedplace__design__instance__count... val R²=0.9473±0.0123 (59 feats)
+  iter  60: +3_5_place_dp__detailedplace__design__instance__count__stdcel... val R²=0.9759±0.0175 (60 feats)
+  iter  61: +3_5_place_dp__detailedplace__design__instance__utilization... val R²=0.9680±0.0154 (61 feats)
+  iter  62: +3_5_place_dp__detailedplace__design__instance__utilization__... val R²=0.9760±0.0165 (62 feats)
+  iter  63: +3_5_place_dp__detailedplace__design__nets... val R²=0.9704±0.0196 (63 feats)
+  iter  64: +3_5_place_dp__detailedplace__power__internal__total... val R²=0.9709±0.0181 (64 feats)
+  iter  65: +3_5_place_dp__detailedplace__power__leakage__total... val R²=0.9787±0.0159 (65 feats)
+  iter  66: +3_5_place_dp__detailedplace__power__switching__total... val R²=0.9491±0.0252 (66 feats)
+  iter  67: +3_5_place_dp__detailedplace__power__total... val R²=0.9779±0.0154 (67 feats)
+  iter  68: +3_5_place_dp__detailedplace__timing__drv__setup_violation_co... val R²=0.9571±0.0120 (68 feats)
+  iter  69: +3_5_place_dp__detailedplace__timing__setup__tns... val R²=0.9697±0.0195 (69 feats)
+  iter  70: +3_5_place_dp__detailedplace__timing__setup__ws... val R²=0.9690±0.0092 (70 feats)
+  iter  71: +3_5_place_dp__detailedplace__utilization__before__dpl... val R²=0.9729±0.0113 (71 feats)
+  iter  72: +param:CLK_PERIOD... val R²=0.9717±0.0111 (72 feats)
+  iter  73: +param:CTS_CLUSTER_SIZE... val R²=0.9533±0.0142 (73 feats)
+  iter  74: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9773±0.0102 (74 feats)
+  iter  75: +3_4_place_resized__placeopt__timing__drv__max_cap_limit... val R²=0.9433±0.0170 (75 feats)
+
+[FFS] placement → area (75 candidates)
+  iter   1: +3_3_place_gp__globalplace__timing__setup__tns... val R²=0.9882±0.0080 (1 feats)
+  iter   2: +3_3_place_gp__globalplace__gpl__area__original... val R²=0.9910±0.0067 (2 feats)
+  iter   3: +3_5_place_dp__detailedplace__dpl__hpwl__delta... val R²=0.9950±0.0032 (3 feats)
+  iter   4: +3_5_place_dp__detailedplace__dpl__hpwl__delta__percent... val R²=0.9953±0.0040 (4 feats)
+  iter   5: +3_3_place_gp__globalplace__gpl__convergence__iteration... val R²=0.9962±0.0022 (5 feats)
+  iter   6: +3_3_place_gp__globalplace__power__leakage__total... val R²=0.9961±0.0024 (6 feats)
+  iter   7: +3_3_place_gp__globalplace__gpl__routability__congestion... val R²=0.9977±0.0026 (7 feats)
+  iter   8: +3_5_place_dp__detailedplace__timing__drv__max_cap_limit... val R²=0.9969±0.0024 (8 feats)
+  iter   9: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9973±0.0019 (9 feats)
+  iter  10: +3_3_place_gp__globalplace__design__instance__area... val R²=0.9976±0.0016 (10 feats)
+  iter  11: +3_3_place_gp__globalplace__gpl__area__final__percent... val R²=0.9969±0.0022 (11 feats)
+  iter  12: +3_4_place_resized__placeopt__power__leakage__total... val R²=0.9974±0.0018 (12 feats)
+  iter  13: +3_5_place_dp__detailedplace__timing__hold__ws... val R²=0.9975±0.0017 (13 feats)
+  iter  14: +3_3_place_gp__globalplace__design__instance__count... val R²=0.9968±0.0027 (14 feats)
+  iter  15: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9968±0.0019 (15 feats)
+  iter  16: +3_3_place_gp__globalplace__design__instance__count__stdcell... val R²=0.9970±0.0015 (16 feats)
+  iter  17: +3_3_place_gp__globalplace__gpl__routability__iteration... val R²=0.9972±0.0021 (17 feats)
+  iter  18: +3_4_place_resized__placeopt__timing__drv__max_cap_limit... val R²=0.9972±0.0017 (18 feats)
+  iter  19: +3_5_place_dp__detailedplace__timing__drv__max_slew_limit... val R²=0.9970±0.0017 (19 feats)
+  iter  20: +3_5_place_dp__detailedplace__negotiation__converge__phase_1_... val R²=0.9976±0.0017 (20 feats)
+  iter  21: +3_3_place_gp__globalplace__timing__hold__ws... val R²=0.9969±0.0022 (21 feats)
+  iter  22: +3_5_place_dp__detailedplace__route__wirelength__estimated... val R²=0.9974±0.0016 (22 feats)
+  iter  23: +3_5_place_dp__detailedplace__design__instance__displacement_... val R²=0.9968±0.0027 (23 feats)
+  iter  24: +3_4_place_resized__placeopt__timing__hold__ws... val R²=0.9970±0.0030 (24 feats)
+  iter  25: +3_3_place_gp__globalplace__design__instance__area__stdcell... val R²=0.9971±0.0017 (25 feats)
+  iter  26: +3_3_place_gp__globalplace__design__instance__utilization... val R²=0.9974±0.0022 (26 feats)
+  iter  27: +3_3_place_gp__globalplace__design__instance__utilization__st... val R²=0.9973±0.0017 (27 feats)
+  iter  28: +3_3_place_gp__globalplace__design__nets... val R²=0.9972±0.0016 (28 feats)
+  iter  29: +3_3_place_gp__globalplace__gpl__area__final... val R²=0.9965±0.0024 (29 feats)
+  iter  30: +3_3_place_gp__globalplace__gpl__area__timing_delta... val R²=0.9973±0.0017 (30 feats)
+  iter  31: +3_3_place_gp__globalplace__gpl__area__timing_delta__percent... val R²=0.9965±0.0035 (31 feats)
+  iter  32: +3_3_place_gp__globalplace__power__internal__total... val R²=0.9947±0.0051 (32 feats)
+  iter  33: +3_3_place_gp__globalplace__power__switching__total... val R²=0.9973±0.0025 (33 feats)
+  iter  34: +3_3_place_gp__globalplace__power__total... val R²=0.9968±0.0019 (34 feats)
+  iter  35: +3_3_place_gp__globalplace__timing__fmax... val R²=0.9969±0.0025 (35 feats)
+  iter  36: +3_3_place_gp__globalplace__timing__fmax__clock:core_clock... val R²=0.9971±0.0016 (36 feats)
+  iter  37: +3_3_place_gp__globalplace__timing__setup__ws... val R²=0.9968±0.0022 (37 feats)
+  iter  38: +3_4_place_resized__placeopt__design__instance__area... val R²=0.9973±0.0017 (38 feats)
+  iter  39: +3_4_place_resized__placeopt__design__instance__area__stdcell... val R²=0.9961±0.0034 (39 feats)
+  iter  40: +3_4_place_resized__placeopt__design__instance__count... val R²=0.9973±0.0018 (40 feats)
+  iter  41: +3_4_place_resized__placeopt__design__instance__count__stdcel... val R²=0.9968±0.0028 (41 feats)
+  iter  42: +3_4_place_resized__placeopt__design__instance__utilization... val R²=0.9974±0.0019 (42 feats)
+  iter  43: +3_4_place_resized__placeopt__design__instance__utilization__... val R²=0.9972±0.0025 (43 feats)
+  iter  44: +3_4_place_resized__placeopt__design__nets... val R²=0.9970±0.0017 (44 feats)
+  iter  45: +3_4_place_resized__placeopt__power__internal__total... val R²=0.9970±0.0025 (45 feats)
+  iter  46: +3_4_place_resized__placeopt__power__switching__total... val R²=0.9969±0.0018 (46 feats)
+  iter  47: +3_4_place_resized__placeopt__power__total... val R²=0.9971±0.0017 (47 feats)
+  iter  48: +3_4_place_resized__placeopt__timing__drv__setup_violation_co... val R²=0.9968±0.0019 (48 feats)
+  iter  49: +3_4_place_resized__placeopt__timing__fmax... val R²=0.9970±0.0018 (49 feats)
+  iter  50: +3_4_place_resized__placeopt__timing__fmax__clock:core_clock... val R²=0.9969±0.0018 (50 feats)
+  iter  51: +3_4_place_resized__placeopt__timing__setup__tns... val R²=0.9973±0.0018 (51 feats)
+  iter  52: +3_4_place_resized__placeopt__timing__setup__ws... val R²=0.9967±0.0020 (52 feats)
+  iter  53: +3_5_place_dp__detailedplace__design__instance__area... val R²=0.9971±0.0018 (53 feats)
+  iter  54: +3_5_place_dp__detailedplace__design__instance__area__stdcell... val R²=0.9967±0.0020 (54 feats)
+  iter  55: +3_5_place_dp__detailedplace__design__instance__count... val R²=0.9971±0.0017 (55 feats)
+  iter  56: +3_5_place_dp__detailedplace__design__instance__count__stdcel... val R²=0.9969±0.0018 (56 feats)
+  iter  57: +3_5_place_dp__detailedplace__design__instance__utilization... val R²=0.9965±0.0025 (57 feats)
+  iter  58: +3_5_place_dp__detailedplace__design__instance__utilization__... val R²=0.9963±0.0033 (58 feats)
+  iter  59: +3_5_place_dp__detailedplace__design__nets... val R²=0.9966±0.0023 (59 feats)
+  iter  60: +3_5_place_dp__detailedplace__power__internal__total... val R²=0.9978±0.0021 (60 feats)
+  iter  61: +3_5_place_dp__detailedplace__power__leakage__total... val R²=0.9969±0.0026 (61 feats)
+  iter  62: +3_5_place_dp__detailedplace__power__switching__total... val R²=0.9977±0.0022 (62 feats)
+  iter  63: +3_5_place_dp__detailedplace__power__total... val R²=0.9969±0.0030 (63 feats)
+  iter  64: +3_5_place_dp__detailedplace__timing__drv__setup_violation_co... val R²=0.9975±0.0022 (64 feats)
+  iter  65: +3_5_place_dp__detailedplace__timing__setup__tns... val R²=0.9973±0.0021 (65 feats)
+  iter  66: +3_5_place_dp__detailedplace__timing__setup__ws... val R²=0.9970±0.0018 (66 feats)
+  iter  67: +3_5_place_dp__detailedplace__utilization__before__dpl... val R²=0.9975±0.0020 (67 feats)
+  iter  68: +param:CLK_PERIOD... val R²=0.9969±0.0018 (68 feats)
+  iter  69: +param:CTS_CLUSTER_SIZE... val R²=0.9973±0.0018 (69 feats)
+  iter  70: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9969±0.0018 (70 feats)
+  iter  71: +3_4_place_resized__placeopt__timing__drv__max_slew_limit... val R²=0.9967±0.0018 (71 feats)
+  iter  72: +3_3_place_gp__globalplace__route__wirelength__estimated... val R²=0.9916±0.0087 (72 feats)
+  iter  73: +param:CORE_UTILIZATION... val R²=0.9951±0.0034 (73 feats)
+  iter  74: +3_5_place_dp__detailedplace__timing__fmax... val R²=0.9916±0.0094 (74 feats)
+  iter  75: +3_5_place_dp__detailedplace__timing__fmax__clock:core_clock... val R²=0.9950±0.0038 (75 feats)
+
+[FFS] cts → power (36 candidates)
+  iter   1: +4_1_cts__cts__power__internal__total... val R²=0.9779±0.0087 (1 feats)
+  iter   2: +4_1_cts__cts__flow__warnings__count... val R²=0.9856±0.0073 (2 feats)
+  iter   3: +4_1_cts__cts__negotiation__converge__phase_1__iteration... val R²=0.9832±0.0053 (3 feats)
+  iter   4: +4_1_cts__cts__timing__hold__ws... val R²=0.9847±0.0050 (4 feats)
+  iter   5: +4_1_cts__cts__clock__skew__hold... val R²=0.9796±0.0062 (5 feats)
+  iter   6: +4_1_cts__cts__design__instance__area... val R²=0.9803±0.0064 (6 feats)
+  iter   7: +4_1_cts__cts__clock__skew__setup... val R²=0.9844±0.0034 (7 feats)
+  iter   8: +4_1_cts__cts__design__instance__area__stdcell... val R²=0.9831±0.0039 (8 feats)
+  iter   9: +4_1_cts__cts__design__instance__count__setup_buffer... val R²=0.9838±0.0040 (9 feats)
+  iter  10: +4_1_cts__cts__design__instance__count... val R²=0.9799±0.0075 (10 feats)
+  iter  11: +4_1_cts__cts__design__instance__count__stdcell... val R²=0.9783±0.0082 (11 feats)
+  iter  12: +4_1_cts__cts__dpl__hpwl__delta... val R²=0.9788±0.0085 (12 feats)
+  iter  13: +4_1_cts__cts__design__instance__displacement__max... val R²=0.9817±0.0055 (13 feats)
+  iter  14: +4_1_cts__cts__design__instance__displacement__mean... val R²=0.9836±0.0041 (14 feats)
+  iter  15: +4_1_cts__cts__design__instance__displacement__total... val R²=0.9808±0.0062 (15 feats)
+  iter  16: +4_1_cts__cts__design__instance__utilization... val R²=0.9802±0.0073 (16 feats)
+  iter  17: +4_1_cts__cts__design__instance__utilization__stdcell... val R²=0.9847±0.0034 (17 feats)
+  iter  18: +4_1_cts__cts__design__nets... val R²=0.9793±0.0068 (18 feats)
+  iter  19: +4_1_cts__cts__dpl__hpwl__delta__percent... val R²=0.9774±0.0090 (19 feats)
+  iter  20: +4_1_cts__cts__flow__warnings__type_count... val R²=0.9846±0.0041 (20 feats)
+  iter  21: +4_1_cts__cts__power__leakage__total... val R²=0.9825±0.0050 (21 feats)
+  iter  22: +4_1_cts__cts__power__switching__total... val R²=0.9838±0.0041 (22 feats)
+  iter  23: +4_1_cts__cts__power__total... val R²=0.9800±0.0070 (23 feats)
+  iter  24: +4_1_cts__cts__route__wirelength__estimated... val R²=0.9847±0.0037 (24 feats)
+  iter  25: +4_1_cts__cts__timing__drv__max_cap_limit... val R²=0.9821±0.0054 (25 feats)
+  iter  26: +4_1_cts__cts__timing__drv__max_slew_limit... val R²=0.9809±0.0061 (26 feats)
+  iter  27: +4_1_cts__cts__timing__drv__setup_violation_count... val R²=0.9812±0.0060 (27 feats)
+  iter  28: +4_1_cts__cts__timing__fmax... val R²=0.9795±0.0070 (28 feats)
+  iter  29: +4_1_cts__cts__timing__fmax__clock:core_clock... val R²=0.9807±0.0070 (29 feats)
+  iter  30: +4_1_cts__cts__timing__setup__tns... val R²=0.9807±0.0070 (30 feats)
+  iter  31: +4_1_cts__cts__timing__setup__ws... val R²=0.9854±0.0030 (31 feats)
+  iter  32: +4_1_cts__cts__utilization__before__dpl... val R²=0.9825±0.0056 (32 feats)
+  iter  33: +param:CLK_PERIOD... val R²=0.9859±0.0028 (33 feats)
+  iter  34: +param:CORE_UTILIZATION... val R²=0.9822±0.0061 (34 feats)
+  iter  35: +param:CTS_CLUSTER_SIZE... val R²=0.9840±0.0043 (35 feats)
+  iter  36: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9780±0.0094 (36 feats)
+
+[FFS] cts → fmax (36 candidates)
+  iter   1: +4_1_cts__cts__power__internal__total... val R²=0.9184±0.0175 (1 feats)
+  iter   2: +4_1_cts__cts__timing__drv__max_slew_limit... val R²=0.9883±0.0091 (2 feats)
+  iter   3: +4_1_cts__cts__timing__setup__ws... val R²=0.9622±0.0218 (3 feats)
+  iter   4: +4_1_cts__cts__flow__warnings__count... val R²=0.9844±0.0102 (4 feats)
+  iter   5: +4_1_cts__cts__design__instance__area... val R²=0.9514±0.0126 (5 feats)
+  iter   6: +4_1_cts__cts__design__instance__count__setup_buffer... val R²=0.9301±0.0286 (6 feats)
+  iter   7: +4_1_cts__cts__design__instance__displacement__max... val R²=0.9711±0.0060 (7 feats)
+  iter   8: +4_1_cts__cts__timing__drv__max_cap_limit... val R²=0.9444±0.0372 (8 feats)
+  iter   9: +4_1_cts__cts__design__instance__count... val R²=0.9699±0.0178 (9 feats)
+  iter  10: +4_1_cts__cts__design__instance__count__stdcell... val R²=0.9420±0.0124 (10 feats)
+  iter  11: +4_1_cts__cts__flow__warnings__type_count... val R²=0.9408±0.0091 (11 feats)
+  iter  12: +4_1_cts__cts__dpl__hpwl__delta... val R²=0.9351±0.0165 (12 feats)
+  iter  13: +4_1_cts__cts__timing__hold__ws... val R²=0.9505±0.0156 (13 feats)
+  iter  14: +4_1_cts__cts__design__instance__area__stdcell... val R²=0.9520±0.0129 (14 feats)
+  iter  15: +4_1_cts__cts__design__instance__utilization... val R²=0.9415±0.0178 (15 feats)
+  iter  16: +4_1_cts__cts__dpl__hpwl__delta__percent... val R²=0.9441±0.0198 (16 feats)
+  iter  17: +4_1_cts__cts__design__instance__displacement__total... val R²=0.9678±0.0119 (17 feats)
+  iter  18: +4_1_cts__cts__design__nets... val R²=0.9294±0.0272 (18 feats)
+  iter  19: +4_1_cts__cts__design__instance__utilization__stdcell... val R²=0.9338±0.0214 (19 feats)
+  iter  20: +4_1_cts__cts__power__leakage__total... val R²=0.9586±0.0133 (20 feats)
+  iter  21: +4_1_cts__cts__power__switching__total... val R²=0.9685±0.0034 (21 feats)
+  iter  22: +4_1_cts__cts__power__total... val R²=0.9496±0.0102 (22 feats)
+  iter  23: +4_1_cts__cts__route__wirelength__estimated... val R²=0.9458±0.0030 (23 feats)
+  iter  24: +4_1_cts__cts__negotiation__converge__phase_1__iteration... val R²=0.9726±0.0051 (24 feats)
+  iter  25: +4_1_cts__cts__timing__drv__setup_violation_count... val R²=0.9573±0.0129 (25 feats)
+  iter  26: +4_1_cts__cts__timing__setup__tns... val R²=0.9700±0.0038 (26 feats)
+  iter  27: +4_1_cts__cts__design__instance__displacement__mean... val R²=0.9713±0.0121 (27 feats)
+  iter  28: +4_1_cts__cts__utilization__before__dpl... val R²=0.9400±0.0162 (28 feats)
+  iter  29: +param:CLK_PERIOD... val R²=0.9347±0.0224 (29 feats)
+  iter  30: +param:CTS_CLUSTER_SIZE... val R²=0.9387±0.0129 (30 feats)
+  iter  31: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9663±0.0188 (31 feats)
+  iter  32: +4_1_cts__cts__timing__fmax... val R²=0.9448±0.0274 (32 feats)
+  iter  33: +4_1_cts__cts__timing__fmax__clock:core_clock... val R²=0.9525±0.0219 (33 feats)
+  iter  34: +param:CORE_UTILIZATION... val R²=0.8790±0.0267 (34 feats)
+  iter  35: +4_1_cts__cts__clock__skew__hold... val R²=0.9113±0.0504 (35 feats)
+  iter  36: +4_1_cts__cts__clock__skew__setup... val R²=0.8546±0.0688 (36 feats)
+
+[FFS] cts → area (36 candidates)
+  iter   1: +4_1_cts__cts__design__instance__displacement__mean... val R²=0.9992±0.0005 (1 feats)
+  iter   2: +4_1_cts__cts__dpl__hpwl__delta__percent... val R²=0.9992±0.0004 (2 feats)
+  iter   3: +4_1_cts__cts__design__instance__count... val R²=0.9993±0.0005 (3 feats)
+  iter   4: +4_1_cts__cts__design__instance__count__setup_buffer... val R²=0.9994±0.0004 (4 feats)
+  iter   5: +4_1_cts__cts__clock__skew__hold... val R²=0.9994±0.0004 (5 feats)
+  iter   6: +4_1_cts__cts__clock__skew__setup... val R²=0.9994±0.0004 (6 feats)
+  iter   7: +4_1_cts__cts__timing__drv__max_cap_limit... val R²=0.9994±0.0004 (7 feats)
+  iter   8: +4_1_cts__cts__timing__fmax... val R²=0.9994±0.0004 (8 feats)
+  iter   9: +4_1_cts__cts__power__internal__total... val R²=0.9994±0.0004 (9 feats)
+  iter  10: +4_1_cts__cts__timing__fmax__clock:core_clock... val R²=0.9994±0.0004 (10 feats)
+  iter  11: +4_1_cts__cts__route__wirelength__estimated... val R²=0.9996±0.0004 (11 feats)
+  iter  12: +4_1_cts__cts__power__switching__total... val R²=0.9994±0.0004 (12 feats)
+  iter  13: +4_1_cts__cts__timing__drv__max_slew_limit... val R²=0.9994±0.0004 (13 feats)
+  iter  14: +4_1_cts__cts__power__leakage__total... val R²=0.9994±0.0004 (14 feats)
+  iter  15: +4_1_cts__cts__design__instance__displacement__max... val R²=0.9994±0.0004 (15 feats)
+  iter  16: +4_1_cts__cts__design__instance__area... val R²=0.9993±0.0005 (16 feats)
+  iter  17: +4_1_cts__cts__design__instance__area__stdcell... val R²=0.9992±0.0006 (17 feats)
+  iter  18: +param:CORE_UTILIZATION... val R²=0.9994±0.0005 (18 feats)
+  iter  19: +4_1_cts__cts__design__instance__count__stdcell... val R²=0.9993±0.0005 (19 feats)
+  iter  20: +4_1_cts__cts__design__instance__displacement__total... val R²=0.9993±0.0005 (20 feats)
+  iter  21: +4_1_cts__cts__design__instance__utilization... val R²=0.9995±0.0004 (21 feats)
+  iter  22: +4_1_cts__cts__design__instance__utilization__stdcell... val R²=0.9994±0.0005 (22 feats)
+  iter  23: +4_1_cts__cts__design__nets... val R²=0.9994±0.0003 (23 feats)
+  iter  24: +4_1_cts__cts__dpl__hpwl__delta... val R²=0.9994±0.0004 (24 feats)
+  iter  25: +4_1_cts__cts__flow__warnings__count... val R²=0.9993±0.0005 (25 feats)
+  iter  26: +4_1_cts__cts__flow__warnings__type_count... val R²=0.9994±0.0003 (26 feats)
+  iter  27: +4_1_cts__cts__negotiation__converge__phase_1__iteration... val R²=0.9994±0.0005 (27 feats)
+  iter  28: +4_1_cts__cts__power__total... val R²=0.9993±0.0005 (28 feats)
+  iter  29: +4_1_cts__cts__timing__drv__setup_violation_count... val R²=0.9994±0.0003 (29 feats)
+  iter  30: +4_1_cts__cts__timing__hold__ws... val R²=0.9993±0.0005 (30 feats)
+  iter  31: +4_1_cts__cts__timing__setup__tns... val R²=0.9995±0.0004 (31 feats)
+  iter  32: +4_1_cts__cts__timing__setup__ws... val R²=0.9992±0.0006 (32 feats)
+  iter  33: +4_1_cts__cts__utilization__before__dpl... val R²=0.9994±0.0004 (33 feats)
+  iter  34: +param:CLK_PERIOD... val R²=0.9993±0.0005 (34 feats)
+  iter  35: +param:CTS_CLUSTER_SIZE... val R²=0.9994±0.0004 (35 feats)
+  iter  36: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9993±0.0005 (36 feats)
+
+[FFS] routing → power (58 candidates)
+  iter   1: +5_1_grt__globalroute__power__internal__total... val R²=0.9779±0.0087 (1 feats)
+  iter   2: +5_1_grt__globalroute__design__instance__displacement__mean... val R²=0.9860±0.0064 (2 feats)
+  iter   3: +5_1_grt__globalroute__design__instance__count__setup_buffer... val R²=0.9853±0.0020 (3 feats)
+  iter   4: +5_1_grt__globalroute__timing__setup__tns... val R²=0.9855±0.0020 (4 feats)
+  iter   5: +5_1_grt__globalroute__clock__skew__hold... val R²=0.9800±0.0062 (5 feats)
+  iter   6: +5_1_grt__globalroute__clock__skew__setup... val R²=0.9789±0.0076 (6 feats)
+  iter   7: +5_1_grt__globalroute__design__instance__area... val R²=0.9849±0.0028 (7 feats)
+  iter   8: +5_1_grt__globalroute__design__instance__area__stdcell... val R²=0.9821±0.0052 (8 feats)
+  iter   9: +5_1_grt__globalroute__design__instance__displacement__max... val R²=0.9838±0.0040 (9 feats)
+  iter  10: +5_1_grt__globalroute__design__instance__count... val R²=0.9789±0.0076 (10 feats)
+  iter  11: +5_1_grt__globalroute__timing__drv__max_slew_limit... val R²=0.9773±0.0091 (11 feats)
+  iter  12: +5_1_grt__globalroute__design__instance__count__stdcell... val R²=0.9777±0.0089 (12 feats)
+  iter  13: +5_1_grt__globalroute__design__instance__displacement__total... val R²=0.9767±0.0076 (13 feats)
+  iter  14: +5_1_grt__globalroute__global_route__fastroute__monotonic_s... val R²=0.9828±0.0050 (14 feats)
+  iter  15: +5_1_grt__globalroute__design__instance__utilization... val R²=0.9801±0.0069 (15 feats)
+  iter  16: +5_1_grt__globalroute__design__instance__utilization__stdcell... val R²=0.9793±0.0074 (16 feats)
+  iter  17: +5_1_grt__globalroute__route__net... val R²=0.9837±0.0032 (17 feats)
+  iter  18: +5_1_grt__globalroute__design__nets... val R²=0.9811±0.0052 (18 feats)
+  iter  19: +5_1_grt__globalroute__dpl__hpwl__delta... val R²=0.9780±0.0081 (19 feats)
+  iter  20: +5_1_grt__globalroute__dpl__hpwl__delta__percent... val R²=0.9834±0.0053 (20 feats)
+  iter  21: +5_1_grt__globalroute__flow__warnings__count... val R²=0.9826±0.0040 (21 feats)
+  iter  22: +5_1_grt__globalroute__flow__warnings__type_count... val R²=0.9825±0.0051 (22 feats)
+  iter  23: +5_1_grt__globalroute__global_route__fastroute__congestion_rs... val R²=0.9806±0.0058 (23 feats)
+  iter  24: +5_1_grt__globalroute__power__switching__total... val R²=0.9814±0.0064 (24 feats)
+  iter  25: +5_1_grt__globalroute__global_route__fastroute__finalization_... val R²=0.9806±0.0067 (25 feats)
+  iter  26: +5_1_grt__globalroute__global_route__fastroute__initial_rsmt_... val R²=0.9811±0.0054 (26 feats)
+  iter  27: +5_1_grt__globalroute__global_route__fastroute__new_route_l_s... val R²=0.9807±0.0065 (27 feats)
+  iter  28: +5_1_grt__globalroute__global_route__fastroute__overflow_iter... val R²=0.9799±0.0075 (28 feats)
+  iter  29: +5_1_grt__globalroute__global_route__fastroute__route_l_s... val R²=0.9800±0.0079 (29 feats)
+  iter  30: +5_1_grt__globalroute__global_route__fastroute__route_z_s... val R²=0.9796±0.0077 (30 feats)
+  iter  31: +5_1_grt__globalroute__global_route__fastroute__spiral_s... val R²=0.9842±0.0028 (31 feats)
+  iter  32: +5_1_grt__globalroute__global_route__vias... val R²=0.9802±0.0071 (32 feats)
+  iter  33: +5_1_grt__globalroute__global_route__wirelength... val R²=0.9854±0.0023 (33 feats)
+  iter  34: +5_1_grt__globalroute__power__leakage__total... val R²=0.9737±0.0090 (34 feats)
+  iter  35: +5_1_grt__globalroute__power__total... val R²=0.9809±0.0076 (35 feats)
+  iter  36: +5_1_grt__globalroute__route__wirelength__estimated... val R²=0.9777±0.0089 (36 feats)
+  iter  37: +5_1_grt__globalroute__timing__drv__max_cap_limit... val R²=0.9797±0.0081 (37 feats)
+  iter  38: +5_1_grt__globalroute__timing__drv__setup_violation_count... val R²=0.9797±0.0076 (38 feats)
+  iter  39: +5_1_grt__globalroute__timing__fmax... val R²=0.9817±0.0058 (39 feats)
+  iter  40: +5_1_grt__globalroute__timing__fmax__clock:core_clock... val R²=0.9804±0.0067 (40 feats)
+  iter  41: +5_1_grt__globalroute__timing__hold__ws... val R²=0.9824±0.0052 (41 feats)
+  iter  42: +5_1_grt__globalroute__timing__setup__ws... val R²=0.9812±0.0062 (42 feats)
+  iter  43: +5_1_grt__globalroute__utilization__before__dpl... val R²=0.9813±0.0064 (43 feats)
+  iter  44: +5_2_route__detailedroute__route__drc_errors__iter:0... val R²=0.9789±0.0066 (44 feats)
+  iter  45: +5_2_route__detailedroute__route__drc_errors__iter:1... val R²=0.9810±0.0059 (45 feats)
+  iter  46: +5_2_route__detailedroute__route__drc_errors__iter:2... val R²=0.9809±0.0054 (46 feats)
+  iter  47: +5_2_route__detailedroute__route__net... val R²=0.9777±0.0089 (47 feats)
+  iter  48: +5_2_route__detailedroute__route__vias... val R²=0.9802±0.0060 (48 feats)
+  iter  49: +5_2_route__detailedroute__route__vias__singlecut... val R²=0.9799±0.0072 (49 feats)
+  iter  50: +5_2_route__detailedroute__route__wirelength... val R²=0.9812±0.0058 (50 feats)
+  iter  51: +5_2_route__detailedroute__route__wirelength__iter:0... val R²=0.9795±0.0067 (51 feats)
+  iter  52: +5_2_route__detailedroute__route__wirelength__iter:1... val R²=0.9812±0.0058 (52 feats)
+  iter  53: +5_2_route__detailedroute__route__wirelength__iter:2... val R²=0.9795±0.0067 (53 feats)
+  iter  54: +5_2_route__detailedroute__route__wirelength__iter:3... val R²=0.9813±0.0072 (54 feats)
+  iter  55: +param:CLK_PERIOD... val R²=0.9780±0.0094 (55 feats)
+  iter  56: +param:CORE_UTILIZATION... val R²=0.9813±0.0056 (56 feats)
+  iter  57: +param:CTS_CLUSTER_SIZE... val R²=0.9800±0.0078 (57 feats)
+  iter  58: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9834±0.0038 (58 feats)
+
+[FFS] routing → fmax (58 candidates)
+  iter   1: +5_1_grt__globalroute__power__internal__total... val R²=0.9184±0.0175 (1 feats)
+  iter   2: +5_1_grt__globalroute__timing__setup__ws... val R²=0.9751±0.0165 (2 feats)
+  iter   3: +5_2_route__detailedroute__route__drc_errors__iter:0... val R²=0.9796±0.0139 (3 feats)
+  iter   4: +5_1_grt__globalroute__dpl__hpwl__delta__percent... val R²=0.9811±0.0133 (4 feats)
+  iter   5: +5_1_grt__globalroute__global_route__fastroute__congestion_rs... val R²=0.9678±0.0101 (5 feats)
+  iter   6: +5_1_grt__globalroute__route__net... val R²=0.9611±0.0104 (6 feats)
+  iter   7: +5_1_grt__globalroute__design__instance__area... val R²=0.9805±0.0112 (7 feats)
+  iter   8: +5_1_grt__globalroute__global_route__fastroute__route_z_s... val R²=0.9728±0.0113 (8 feats)
+  iter   9: +5_1_grt__globalroute__global_route__fastroute__route_l_s... val R²=0.9776±0.0149 (9 feats)
+  iter  10: +5_1_grt__globalroute__timing__drv__max_cap_limit... val R²=0.9594±0.0114 (10 feats)
+  iter  11: +5_1_grt__globalroute__dpl__hpwl__delta... val R²=0.9518±0.0116 (11 feats)
+  iter  12: +5_1_grt__globalroute__timing__hold__ws... val R²=0.9585±0.0091 (12 feats)
+  iter  13: +5_1_grt__globalroute__global_route__fastroute__spiral_s... val R²=0.9685±0.0074 (13 feats)
+  iter  14: +5_1_grt__globalroute__global_route__fastroute__new_route_l_s... val R²=0.9719±0.0089 (14 feats)
+  iter  15: +5_1_grt__globalroute__design__instance__area__stdcell... val R²=0.9637±0.0049 (15 feats)
+  iter  16: +5_1_grt__globalroute__global_route__fastroute__finalization_... val R²=0.9684±0.0076 (16 feats)
+  iter  17: +5_1_grt__globalroute__global_route__vias... val R²=0.9664±0.0100 (17 feats)
+  iter  18: +5_1_grt__globalroute__design__nets... val R²=0.9686±0.0137 (18 feats)
+  iter  19: +5_2_route__detailedroute__route__net... val R²=0.9592±0.0084 (19 feats)
+  iter  20: +5_1_grt__globalroute__global_route__fastroute__monotonic_s... val R²=0.9701±0.0162 (20 feats)
+  iter  21: +5_1_grt__globalroute__global_route__fastroute__overflow_iter... val R²=0.9756±0.0084 (21 feats)
+  iter  22: +5_1_grt__globalroute__design__instance__utilization... val R²=0.9718±0.0132 (22 feats)
+  iter  23: +5_1_grt__globalroute__design__instance__utilization__stdcell... val R²=0.9586±0.0061 (23 feats)
+  iter  24: +5_1_grt__globalroute__design__instance__displacement__total... val R²=0.9746±0.0139 (24 feats)
+  iter  25: +5_1_grt__globalroute__design__instance__count__setup_buffer... val R²=0.9714±0.0078 (25 feats)
+  iter  26: +5_1_grt__globalroute__design__instance__displacement__max... val R²=0.9775±0.0108 (26 feats)
+  iter  27: +5_1_grt__globalroute__flow__warnings__count... val R²=0.9770±0.0103 (27 feats)
+  iter  28: +5_1_grt__globalroute__design__instance__count... val R²=0.9593±0.0143 (28 feats)
+  iter  29: +5_1_grt__globalroute__design__instance__count__stdcell... val R²=0.9530±0.0071 (29 feats)
+  iter  30: +param:CTS_CLUSTER_SIZE... val R²=0.9539±0.0110 (30 feats)
+  iter  31: +5_2_route__detailedroute__route__wirelength... val R²=0.9745±0.0093 (31 feats)
+  iter  32: +5_1_grt__globalroute__flow__warnings__type_count... val R²=0.9534±0.0088 (32 feats)
+  iter  33: +5_1_grt__globalroute__design__instance__displacement__mean... val R²=0.9732±0.0131 (33 feats)
+  iter  34: +5_1_grt__globalroute__global_route__fastroute__initial_rsmt_... val R²=0.9555±0.0121 (34 feats)
+  iter  35: +5_1_grt__globalroute__timing__drv__max_slew_limit... val R²=0.9651±0.0062 (35 feats)
+  iter  36: +5_1_grt__globalroute__timing__fmax... val R²=0.9386±0.0115 (36 feats)
+  iter  37: +5_1_grt__globalroute__global_route__wirelength... val R²=0.9647±0.0195 (37 feats)
+  iter  38: +5_1_grt__globalroute__power__leakage__total... val R²=0.9567±0.0203 (38 feats)
+  iter  39: +5_1_grt__globalroute__power__switching__total... val R²=0.9542±0.0147 (39 feats)
+  iter  40: +5_1_grt__globalroute__clock__skew__hold... val R²=0.9665±0.0196 (40 feats)
+  iter  41: +5_1_grt__globalroute__clock__skew__setup... val R²=0.9595±0.0158 (41 feats)
+  iter  42: +5_2_route__detailedroute__route__drc_errors__iter:2... val R²=0.9715±0.0160 (42 feats)
+  iter  43: +5_1_grt__globalroute__power__total... val R²=0.9598±0.0072 (43 feats)
+  iter  44: +5_1_grt__globalroute__timing__fmax__clock:core_clock... val R²=0.9650±0.0115 (44 feats)
+  iter  45: +5_1_grt__globalroute__route__wirelength__estimated... val R²=0.9470±0.0075 (45 feats)
+  iter  46: +5_1_grt__globalroute__timing__drv__setup_violation_count... val R²=0.9680±0.0153 (46 feats)
+  iter  47: +5_1_grt__globalroute__timing__setup__tns... val R²=0.9405±0.0160 (47 feats)
+  iter  48: +5_1_grt__globalroute__utilization__before__dpl... val R²=0.9673±0.0159 (48 feats)
+  iter  49: +5_2_route__detailedroute__route__drc_errors__iter:1... val R²=0.9466±0.0184 (49 feats)
+  iter  50: +5_2_route__detailedroute__route__vias... val R²=0.9565±0.0164 (50 feats)
+  iter  51: +5_2_route__detailedroute__route__vias__singlecut... val R²=0.9486±0.0224 (51 feats)
+  iter  52: +5_2_route__detailedroute__route__wirelength__iter:0... val R²=0.9536±0.0143 (52 feats)
+  iter  53: +5_2_route__detailedroute__route__wirelength__iter:1... val R²=0.9585±0.0145 (53 feats)
+  iter  54: +5_2_route__detailedroute__route__wirelength__iter:2... val R²=0.9607±0.0154 (54 feats)
+  iter  55: +5_2_route__detailedroute__route__wirelength__iter:3... val R²=0.9481±0.0128 (55 feats)
+  iter  56: +param:CLK_PERIOD... val R²=0.9637±0.0177 (56 feats)
+  iter  57: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9328±0.0132 (57 feats)
+  iter  58: +param:CORE_UTILIZATION... val R²=0.9474±0.0204 (58 feats)
+
+[FFS] routing → area (58 candidates)
+  iter   1: +5_2_route__detailedroute__route__wirelength__iter:1... val R²=0.9994±0.0005 (1 feats)
+  iter   2: +5_1_grt__globalroute__global_route__wirelength... val R²=0.9995±0.0002 (2 feats)
+  iter   3: +5_1_grt__globalroute__design__instance__displacement__max... val R²=0.9996±0.0003 (3 feats)
+  iter   4: +5_2_route__detailedroute__route__drc_errors__iter:1... val R²=0.9995±0.0001 (4 feats)
+  iter   5: +5_1_grt__globalroute__timing__drv__max_slew_limit... val R²=0.9997±0.0003 (5 feats)
+  iter   6: +5_1_grt__globalroute__dpl__hpwl__delta... val R²=0.9998±0.0003 (6 feats)
+  iter   7: +5_1_grt__globalroute__design__instance__area... val R²=0.9998±0.0002 (7 feats)
+  iter   8: +5_1_grt__globalroute__design__instance__area__stdcell... val R²=0.9997±0.0003 (8 feats)
+  iter   9: +param:CORE_UTILIZATION... val R²=0.9998±0.0003 (9 feats)
+  iter  10: +5_2_route__detailedroute__route__vias... val R²=0.9998±0.0003 (10 feats)
+  iter  11: +5_1_grt__globalroute__global_route__fastroute__overflow_iter... val R²=0.9997±0.0003 (11 feats)
+  iter  12: +5_1_grt__globalroute__global_route__fastroute__spiral_s... val R²=0.9998±0.0003 (12 feats)
+  iter  13: +5_1_grt__globalroute__power__internal__total... val R²=0.9997±0.0003 (13 feats)
+  iter  14: +5_1_grt__globalroute__timing__drv__max_cap_limit... val R²=0.9998±0.0003 (14 feats)
+  iter  15: +5_1_grt__globalroute__timing__hold__ws... val R²=0.9995±0.0001 (15 feats)
+  iter  16: +5_2_route__detailedroute__route__drc_errors__iter:0... val R²=0.9998±0.0003 (16 feats)
+  iter  17: +5_1_grt__globalroute__clock__skew__hold... val R²=0.9996±0.0006 (17 feats)
+  iter  18: +5_2_route__detailedroute__route__drc_errors__iter:2... val R²=0.9998±0.0001 (18 feats)
+  iter  19: +5_1_grt__globalroute__dpl__hpwl__delta__percent... val R²=0.9997±0.0002 (19 feats)
+  iter  20: +5_1_grt__globalroute__timing__fmax... val R²=0.9998±0.0003 (20 feats)
+  iter  21: +5_1_grt__globalroute__global_route__fastroute__monotonic_s... val R²=0.9990±0.0004 (21 feats)
+  iter  22: +5_1_grt__globalroute__clock__skew__setup... val R²=0.9997±0.0003 (22 feats)
+  iter  23: +5_1_grt__globalroute__design__instance__count... val R²=0.9990±0.0004 (23 feats)
+  iter  24: +5_1_grt__globalroute__global_route__vias... val R²=0.9997±0.0001 (24 feats)
+  iter  25: +5_1_grt__globalroute__design__instance__count__setup_buffer... val R²=0.9997±0.0003 (25 feats)
+  iter  26: +5_1_grt__globalroute__global_route__fastroute__finalization_... val R²=0.9992±0.0001 (26 feats)
+  iter  27: +5_1_grt__globalroute__design__instance__count__stdcell... val R²=0.9997±0.0003 (27 feats)
+  iter  28: +5_1_grt__globalroute__global_route__fastroute__route_z_s... val R²=0.9998±0.0003 (28 feats)
+  iter  29: +5_1_grt__globalroute__design__instance__displacement__mean... val R²=0.9997±0.0004 (29 feats)
+  iter  30: +5_1_grt__globalroute__design__instance__utilization... val R²=0.9998±0.0003 (30 feats)
+  iter  31: +5_1_grt__globalroute__design__instance__displacement__total... val R²=0.9997±0.0003 (31 feats)
+  iter  32: +5_1_grt__globalroute__design__instance__utilization__stdcell... val R²=0.9996±0.0006 (32 feats)
+  iter  33: +5_1_grt__globalroute__design__nets... val R²=0.9991±0.0001 (33 feats)
+  iter  34: +5_1_grt__globalroute__flow__warnings__count... val R²=0.9998±0.0003 (34 feats)
+  iter  35: +5_1_grt__globalroute__flow__warnings__type_count... val R²=0.9997±0.0001 (35 feats)
+  iter  36: +5_1_grt__globalroute__global_route__fastroute__congestion_rs... val R²=0.9997±0.0003 (36 feats)
+  iter  37: +5_1_grt__globalroute__global_route__fastroute__initial_rsmt_... val R²=0.9995±0.0001 (37 feats)
+  iter  38: +5_1_grt__globalroute__route__net... val R²=0.9998±0.0003 (38 feats)
+  iter  39: +5_1_grt__globalroute__global_route__fastroute__new_route_l_s... val R²=0.9997±0.0002 (39 feats)
+  iter  40: +5_1_grt__globalroute__global_route__fastroute__route_l_s... val R²=0.9997±0.0002 (40 feats)
+  iter  41: +5_1_grt__globalroute__power__leakage__total... val R²=0.9997±0.0003 (41 feats)
+  iter  42: +5_1_grt__globalroute__power__switching__total... val R²=0.9997±0.0002 (42 feats)
+  iter  43: +5_1_grt__globalroute__power__total... val R²=0.9996±0.0002 (43 feats)
+  iter  44: +5_1_grt__globalroute__route__wirelength__estimated... val R²=0.9997±0.0002 (44 feats)
+  iter  45: +5_1_grt__globalroute__timing__drv__setup_violation_count... val R²=0.9996±0.0003 (45 feats)
+  iter  46: +5_1_grt__globalroute__timing__fmax__clock:core_clock... val R²=0.9997±0.0002 (46 feats)
+  iter  47: +5_1_grt__globalroute__timing__setup__tns... val R²=0.9998±0.0003 (47 feats)
+  iter  48: +5_1_grt__globalroute__timing__setup__ws... val R²=0.9997±0.0002 (48 feats)
+  iter  49: +5_1_grt__globalroute__utilization__before__dpl... val R²=0.9997±0.0002 (49 feats)
+  iter  50: +5_2_route__detailedroute__route__net... val R²=0.9997±0.0002 (50 feats)
+  iter  51: +5_2_route__detailedroute__route__vias__singlecut... val R²=0.9997±0.0003 (51 feats)
+  iter  52: +5_2_route__detailedroute__route__wirelength... val R²=0.9997±0.0003 (52 feats)
+  iter  53: +5_2_route__detailedroute__route__wirelength__iter:0... val R²=0.9997±0.0003 (53 feats)
+  iter  54: +5_2_route__detailedroute__route__wirelength__iter:2... val R²=0.9994±0.0001 (54 feats)
+  iter  55: +5_2_route__detailedroute__route__wirelength__iter:3... val R²=0.9998±0.0003 (55 feats)
+  iter  56: +param:CLK_PERIOD... val R²=0.9996±0.0001 (56 feats)
+  iter  57: +param:CTS_CLUSTER_SIZE... val R²=0.9997±0.0003 (57 feats)
+  iter  58: +param:PLACE_DENSITY_LB_ADDON... val R²=0.9997±0.0002 (58 feats)
+
+Done. Outputs in /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_selection

@@ -1,0 +1,13 @@
+stage,target,ablation,removed_group,features_used,n_features,mae,rmse,r2,n_train,n_test,delta_r2
+placement,power,all,,"hpwl,placement_density,estimated_congestion,inv_fmax",4,0.00048783892914837227,0.000856104446151981,0.9020304538080752,20,980,0.0
+placement,power,-congestion,congestion,"hpwl,placement_density,inv_fmax",3,0.00046292456301331335,0.0008097779214650603,0.9123464611920075,20,980,-0.010316007383932235
+placement,power,-placement,placement,"estimated_congestion,inv_fmax",2,0.0011234110754946359,0.001677840755096678,0.6236957963303129,20,980,0.2783346574777623
+placement,power,-timing,timing,"hpwl,placement_density,estimated_congestion",3,0.00048062803814050126,0.0008165428585424705,0.9108758171634924,20,980,-0.00884536335541719
+placement,fmax,all,,"hpwl,placement_density,estimated_congestion,inv_fmax",4,19292968.718367346,30417766.867733516,0.8942856978946829,20,980,0.0
+placement,fmax,-congestion,congestion,"hpwl,placement_density,inv_fmax",3,16935003.102040816,26216360.52957722,0.9214721160654669,20,980,-0.027186418170783933
+placement,fmax,-placement,placement,"estimated_congestion,inv_fmax",2,37281027.72244898,56090953.772654824,0.6405282691893845,20,980,0.2537574287052984
+placement,fmax,-timing,timing,"hpwl,placement_density,estimated_congestion",3,18829474.38367347,28335054.15072331,0.9082666641025223,20,980,-0.013980966207839396
+placement,area,all,,"hpwl,placement_density,estimated_congestion,inv_fmax",4,11.097575,18.578849470696934,0.9766094171140065,20,980,0.0
+placement,area,-congestion,congestion,"hpwl,placement_density,inv_fmax",3,10.265103581891745,17.20372311484019,0.9799438162076342,20,980,-0.003334399093627649
+placement,area,-placement,placement,"estimated_congestion,inv_fmax",2,43.63253910086496,66.83680835865688,0.697284388795111,20,980,0.2793250283188955
+placement,area,-timing,timing,"hpwl,placement_density,estimated_congestion",3,10.234168891501914,17.601802294435736,0.9790049124652667,20,980,-0.0023954953512601573

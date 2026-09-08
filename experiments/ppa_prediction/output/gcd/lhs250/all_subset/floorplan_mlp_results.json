@@ -1,0 +1,161 @@
+{
+  "csv_path": "/data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/lhs250/floorplan_param_explore.csv",
+  "subset": "all",
+  "n_trajectories": 600,
+  "train_size": 20,
+  "n_test": 580,
+  "param_cols": [
+    "p_CORE_UTILIZATION",
+    "p_CORE_ASPECT_RATIO",
+    "p_CORE_MARGIN",
+    "p_PLACE_DENSITY_LB_ADDON",
+    "p_CELL_PAD_IN_SITES_GLOBAL_PLACEMENT",
+    "p_CELL_PAD_IN_SITES_DETAIL_PLACEMENT",
+    "p_CTS_CLUSTER_SIZE",
+    "p_CTS_CLUSTER_DIAMETER",
+    "p_TNS_END_PERCENT",
+    "p_SETUP_SLACK_MARGIN",
+    "p_ENABLE_PLACE_REPAIR_TIMING",
+    "p_ROUTING_LAYER_ADJUSTMENT",
+    "p_GPL_RANDOM_SEED",
+    "p_GRT_SEED"
+  ],
+  "metrics": [
+    {
+      "target": "power",
+      "y_col": "fp_power",
+      "n_train": 20,
+      "n_test": 580,
+      "y_std": 0.000589779281595671,
+      "results": [
+        {
+          "model": "mean",
+          "r2": -0.015469765337921881,
+          "mae": 0.000516379960862069,
+          "nmae_pct": 87.55478142009038,
+          "rank_corr": NaN,
+          "baseline_mae": 0.000516379960862069
+        },
+        {
+          "model": "linear",
+          "r2": -1.2751211208517526,
+          "mae": 0.0007214653524996495,
+          "nmae_pct": 122.32802592652912,
+          "rank_corr": 0.004866355629045178,
+          "baseline_mae": 0.000516379960862069
+        },
+        {
+          "model": "mlp",
+          "r2": -26089.946706264527,
+          "mae": 0.07690202877123899,
+          "nmae_pct": 13039.120086276605,
+          "rank_corr": 0.015640116390559847,
+          "baseline_mae": 0.000516379960862069
+        }
+      ],
+      "mlp_n_iter": 500
+    },
+    {
+      "target": "area",
+      "y_col": "fp_area",
+      "n_train": 20,
+      "n_test": 580,
+      "y_std": 24.267823737219125,
+      "results": [
+        {
+          "model": "mean",
+          "r2": -0.029438905165303675,
+          "mae": 20.23159310344825,
+          "nmae_pct": 83.36797449381265,
+          "rank_corr": NaN,
+          "baseline_mae": 20.23159310344825
+        },
+        {
+          "model": "linear",
+          "r2": -1.9104148921238955,
+          "mae": 33.96856489956679,
+          "nmae_pct": 139.97367570899988,
+          "rank_corr": -0.08121003235740022,
+          "baseline_mae": 20.23159310344825
+        },
+        {
+          "model": "mlp",
+          "r2": -47.180729196168265,
+          "mae": 142.30963871886263,
+          "nmae_pct": 586.4128578641557,
+          "rank_corr": -0.06461356847125721,
+          "baseline_mae": 20.23159310344825
+        }
+      ],
+      "mlp_n_iter": 87
+    },
+    {
+      "target": "wns",
+      "y_col": "fp_wns",
+      "n_train": 20,
+      "n_test": 580,
+      "y_std": 0.11699832429050556,
+      "results": [
+        {
+          "model": "mean",
+          "r2": -0.028340687825855415,
+          "mae": 0.09845426868275861,
+          "nmae_pct": 84.15015281611875,
+          "rank_corr": NaN,
+          "baseline_mae": 0.09845426868275861
+        },
+        {
+          "model": "linear",
+          "r2": -1.611722754020069,
+          "mae": 0.15215129653890078,
+          "nmae_pct": 130.04570574969156,
+          "rank_corr": -0.01074022993043738,
+          "baseline_mae": 0.09845426868275861
+        },
+        {
+          "model": "mlp",
+          "r2": -0.675091249430469,
+          "mae": 0.11794820147664799,
+          "nmae_pct": 100.8118724707406,
+          "rank_corr": -0.05949094053374326,
+          "baseline_mae": 0.09845426868275861
+        }
+      ],
+      "mlp_n_iter": 480
+    },
+    {
+      "target": "tns",
+      "y_col": "fp_tns",
+      "n_train": 20,
+      "n_test": 580,
+      "y_std": 3.018630544295573,
+      "results": [
+        {
+          "model": "mean",
+          "r2": -0.00560190598382504,
+          "mae": 2.776024459103448,
+          "nmae_pct": 91.96304146426309,
+          "rank_corr": NaN,
+          "baseline_mae": 2.776024459103448
+        },
+        {
+          "model": "linear",
+          "r2": -1.2091586118660933,
+          "mae": 3.6607393995176145,
+          "nmae_pct": 121.27152845635449,
+          "rank_corr": -0.005234424447186505,
+          "baseline_mae": 2.776024459103448
+        },
+        {
+          "model": "mlp",
+          "r2": -0.28967267426879406,
+          "mae": 2.9052329531116508,
+          "nmae_pct": 96.24340940304158,
+          "rank_corr": -0.11243860228306983,
+          "baseline_mae": 2.776024459103448
+        }
+      ],
+      "mlp_n_iter": 29
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+feature,mean_abs_shap,mean_shap,rank
+total_negative_slack,0.0013918012,-0.0005023019,1
+buffer_inverter_count,0.0005651899,-0.00029175828,2
+inv_fmax,0.00050810946,-6.0531074e-05,3
+clock_skew,0.0,0.0,4

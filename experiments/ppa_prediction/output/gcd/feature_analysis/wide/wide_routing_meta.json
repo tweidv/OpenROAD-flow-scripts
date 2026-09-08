@@ -1,0 +1,14 @@
+{
+  "stage": "routing",
+  "n_features": 67,
+  "feature_groups": {
+    "configuration": 6,
+    "globalroute": 49,
+    "detailedroute": 12
+  },
+  "source_files": [
+    "5_1_grt.json",
+    "5_2_route.json",
+    "5_3_fillcell.json"
+  ]
+}

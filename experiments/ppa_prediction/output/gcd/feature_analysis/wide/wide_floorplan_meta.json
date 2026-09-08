@@ -1,0 +1,14 @@
+{
+  "stage": "floorplan",
+  "n_features": 27,
+  "feature_groups": {
+    "configuration": 6,
+    "floorplan": 21
+  },
+  "source_files": [
+    "2_1_floorplan.json",
+    "2_2_floorplan_macro.json",
+    "2_3_floorplan_tapcell.json",
+    "2_4_floorplan_pdn.json"
+  ]
+}

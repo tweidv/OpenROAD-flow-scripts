@@ -1,0 +1,14 @@
+metric_category,n_metrics
+routing,112
+placement,95
+finish,70
+cts,55
+placeopt,43
+floorplan,38
+flow,23
+synthesis,19
+configuration,8
+run,7
+gpl,3
+design,2
+clock_period,1

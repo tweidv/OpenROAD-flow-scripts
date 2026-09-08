@@ -193,6 +193,10 @@ _installKlayoutDependenciesUbuntuAarch64() {
 }
 
 _installUbuntuPackages() {
+    # Debian 13 (trixie): use Ubuntu 24.04 package/klayout selections.
+    if [[ "$1" == "13" ]]; then
+        set -- "24.04"
+    fi
     export DEBIAN_FRONTEND="noninteractive"
     apt-get -y update
     apt-get -y install --no-install-recommends \
@@ -284,6 +288,12 @@ _installUbuntuPackages() {
         # and also this allows the user to choose drop in replacements
         # for docker, such as podman-docker
         echo "Docker is already installed, skip docker reinstall."
+        return 0
+    fi
+
+    # Local Debian builds do not need Docker; Ubuntu Docker repos break on trixie.
+    if grep -q '^ID=debian' /etc/os-release 2>/dev/null; then
+        echo "Skipping Docker install on Debian (local build path)."
         return 0
     fi
 
@@ -510,7 +520,7 @@ case "${os}" in
             _installPipCommon
         fi
         ;;
-    "Ubuntu" | "Debian GNU/Linux rodete" )
+    "Ubuntu" | "Debian GNU/Linux rodete" | "Debian GNU/Linux" )
         version=$(awk -F= '/^VERSION_ID/{print $2}' /etc/os-release | sed 's/"//g')
         if [[ -z ${version} ]]; then
             version=$(awk -F= '/^VERSION_CODENAME/{print $2}' /etc/os-release | sed 's/"//g')

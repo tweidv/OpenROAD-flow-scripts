@@ -1,0 +1,942 @@
+[
+  {
+    "trajectory_id": "traj_ibex_fclk3_016",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_017",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_018",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_019",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_020",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_021",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_022",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_023",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_024",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_025",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_026",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_027",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_028",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_029",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_030",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_031",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_032",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_033",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_034",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_035",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_036",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_037",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_038",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_039",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_040",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_041",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_042",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_043",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_044",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_045",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_046",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_047",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_048",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_049",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_050",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_051",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_052",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_053",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_054",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_055",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_056",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_057",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_058",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_059",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_060",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_061",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_062",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_063",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_064",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_065",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_066",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_067",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_068",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_069",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_070",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_071",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_072",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_073",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_074",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_075",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_076",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_077",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_078",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_079",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_080",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_081",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_082",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_083",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_084",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_085",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_086",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_087",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_088",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_089",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_090",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_091",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_092",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_093",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_094",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_095",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_096",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_097",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_098",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_099",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_100",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_101",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_102",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_103",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_104",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_105",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_106",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_107",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_108",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_109",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_110",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_111",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_112",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_113",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_114",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_115",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_116",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_117",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_118",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_119",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_120",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_121",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_122",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_123",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_124",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_125",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_126",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_127",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_128",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_129",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_130",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_131",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_132",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_133",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_134",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_135",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_136",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_137",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_138",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_139",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_140",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_141",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_142",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_143",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_144",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_145",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_146",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_147",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_148",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_149",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_150",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_151",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_152",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_153",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_154",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_155",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_156",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_157",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_158",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_159",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_160",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_161",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_162",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_163",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_164",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_165",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_166",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_167",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_168",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_169",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_170",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_171",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_172",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_173",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_174",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_175",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_176",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_177",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_178",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_179",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_180",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_181",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_182",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_183",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_184",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_185",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_186",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_187",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_188",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_189",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_190",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_191",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_192",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_193",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_194",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_195",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_196",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_197",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_198",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_199",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_200",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_201",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_202",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_203",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_204",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_205",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_206",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_207",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_208",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_209",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_210",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_211",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_212",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_213",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_214",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_215",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_216",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_217",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_218",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_219",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_220",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_221",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_222",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_223",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_224",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_225",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_226",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_227",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_228",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_229",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_230",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_231",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_232",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_233",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_234",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_235",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_236",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_237",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_238",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_239",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_240",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_241",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_242",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_243",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_244",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_245",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_246",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_247",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_248",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_249",
+    "returncode": 0
+  },
+  {
+    "trajectory_id": "traj_ibex_fclk3_250",
+    "returncode": 0
+  }
+]

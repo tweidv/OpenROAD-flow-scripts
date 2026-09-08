@@ -186,6 +186,10 @@ gallery: check-klayout $(RESULTS_DIR)/6_final_no_power.def $(RESULTS_DIR)/6_fina
 	        -rd tech_file=$(OBJECTS_DIR)/klayout.lyt \
 	        -rm $(UTILS_DIR)/createGallery.py
 
+.PHONY: progression-images
+progression-images:
+	@DISPLAY= QT_QPA_PLATFORM=offscreen $(SCRIPTS_DIR)/export_progression.sh
+
 .PHONY: view_cells view_cells_web
 view_cells:
 	$(OPENROAD_GUI_CMD) $(SCRIPTS_DIR)/view_cells.tcl

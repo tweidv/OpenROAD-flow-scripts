@@ -1,0 +1,406 @@
+{
+  "structural_only": {
+    "combined": [
+      {
+        "n_train_trajectories": 5,
+        "r2": -0.09352844182747932
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": 0.14497605707111139
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.46074447044976363
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.9325667179736192
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.937826463204315
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.941571754506046
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.9348233994696256
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.9363405208154092
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.9303628859544038
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.9364448878025253
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.9505224967828289
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.936903635936968
+      }
+    ],
+    "floorplan": [
+      {
+        "n_train_trajectories": 5,
+        "r2": -0.03591276232573337
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": 0.20737382258715797
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.6725494883824039
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.9092791479191121
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.9188069704535741
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.929016351483368
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.928681610474009
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.925779425656935
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.9307104571198336
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.9309801727699019
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.949808976542061
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.9481345892946598
+      }
+    ],
+    "placement": [
+      {
+        "n_train_trajectories": 5,
+        "r2": -0.05498684297104339
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": -0.028519958631299636
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.8353713020765798
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.951548392453221
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.9674549243834385
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.9662184189977093
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.9639066176461457
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.9648519433860318
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.9672612807566182
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.9686239223378479
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.9619342506112601
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.9670594704252137
+      }
+    ],
+    "routing": [
+      {
+        "n_train_trajectories": 5,
+        "r2": -0.7918636131917685
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": 0.055896741570829134
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.5341982708012079
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.9779863752619725
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.9815408545713247
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.9855231349618264
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.986300692134375
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.987545938417159
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.9868657028222052
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.987501469163708
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.9872985767568563
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.988184365230314
+      }
+    ]
+  },
+  "norm_pta": {
+    "combined": [
+      {
+        "n_train_trajectories": 5,
+        "r2": -0.3507071260937271
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": 0.047667371194522246
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.7285259718683195
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.9631899990780074
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.9680516466477389
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.970679230222496
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.9698200805955611
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.9690463320318145
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.9737812528832411
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.9689926608666655
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.9751333704103398
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.9737434939666207
+      }
+    ],
+    "floorplan": [
+      {
+        "n_train_trajectories": 5,
+        "r2": 0.4351552901809226
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": 0.6192634603717052
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.9704701607244891
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.9866784913529316
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.9888612983992969
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.9880206700490761
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.9884459817562328
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.9887261881268664
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.9885020954187508
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.9887459918656394
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.9926694521376552
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.9918830892631044
+      }
+    ],
+    "placement": [
+      {
+        "n_train_trajectories": 5,
+        "r2": -0.3088179206446413
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": 0.0696889352901785
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.568842499893232
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.8737793848823466
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.8731712987606763
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.8810276037925102
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.8813259871995067
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.8823989572860658
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.8841977053705601
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.8856924319197964
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.891590999277742
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.8830448271819872
+      }
+    ],
+    "routing": [
+      {
+        "n_train_trajectories": 5,
+        "r2": -0.2881950774879469
+      },
+      {
+        "n_train_trajectories": 9,
+        "r2": 0.43647145997830006
+      },
+      {
+        "n_train_trajectories": 14,
+        "r2": 0.5373218285124539
+      },
+      {
+        "n_train_trajectories": 18,
+        "r2": 0.8815228582748915
+      },
+      {
+        "n_train_trajectories": 23,
+        "r2": 0.8831153112374965
+      },
+      {
+        "n_train_trajectories": 27,
+        "r2": 0.8837513479962147
+      },
+      {
+        "n_train_trajectories": 32,
+        "r2": 0.8872396648075311
+      },
+      {
+        "n_train_trajectories": 36,
+        "r2": 0.8873824851453916
+      },
+      {
+        "n_train_trajectories": 41,
+        "r2": 0.8875913196104721
+      },
+      {
+        "n_train_trajectories": 45,
+        "r2": 0.8877543808883936
+      },
+      {
+        "n_train_trajectories": 50,
+        "r2": 0.8890004614433531
+      },
+      {
+        "n_train_trajectories": 55,
+        "r2": 0.8889194299813231
+      }
+    ]
+  }
+}

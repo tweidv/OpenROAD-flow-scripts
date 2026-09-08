@@ -1,0 +1,287 @@
+{
+  "design": "ibex",
+  "n_trajectories": 17,
+  "batch_targets": {
+    "source": "best_of_batch",
+    "P_target": 0.0137738,
+    "T_target": 603495000.0,
+    "A_target": 28384.9,
+    "best_P_trajectory": "ibex_large_01",
+    "best_T_trajectory": "ibex_bad_01",
+    "best_A_trajectory": "ibex_large_01",
+    "n_feasible_runs": 17
+  },
+  "experiments": {
+    "structural_only": {
+      "feature_cols": [
+        "core_area",
+        "utilization",
+        "aspect_ratio",
+        "hpwl",
+        "placement_density",
+        "estimated_congestion",
+        "inv_fmax",
+        "total_negative_slack",
+        "clock_skew",
+        "buffer_inverter_count",
+        "routed_wirelength",
+        "congestion",
+        "drc_violation_count",
+        "stage_id"
+      ],
+      "targets": {
+        "V_P": {
+          "floorplan": {
+            "mae": 0.03195053045379252,
+            "rmse": 0.04537719476292797,
+            "r2": 0.5587793965510117,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "placement": {
+            "mae": 0.03813846460812653,
+            "rmse": 0.08478436558255754,
+            "r2": -0.5403238701619688,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "cts": {
+            "mae": 0.010159603224488412,
+            "rmse": 0.022584463658274,
+            "r2": 0.8907050593437522,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "routing": {
+            "mae": 0.007650986777039681,
+            "rmse": 0.016687224928018954,
+            "r2": 0.9403310032624257,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          }
+        },
+        "V_T": {
+          "floorplan": {
+            "mae": 0.02591852463291522,
+            "rmse": 0.028859902871705166,
+            "r2": 0.35508693016265014,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "placement": {
+            "mae": 0.02030241037481968,
+            "rmse": 0.04491972989630274,
+            "r2": -0.5623765809522161,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "cts": {
+            "mae": 0.008155017266734798,
+            "rmse": 0.01766647630784683,
+            "r2": 0.7583363565657526,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "routing": {
+            "mae": 0.006580623860479662,
+            "rmse": 0.014213412832466544,
+            "r2": 0.8435742704939385,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          }
+        },
+        "V_A": {
+          "floorplan": {
+            "mae": 0.0009354140657793053,
+            "rmse": 0.0010965312353614144,
+            "r2": 0.9938694491326641,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "placement": {
+            "mae": 0.000876912842332267,
+            "rmse": 0.001828367096380211,
+            "r2": 0.9829554994517232,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "cts": {
+            "mae": 0.00045471775084244826,
+            "rmse": 0.000665582153502771,
+            "r2": 0.9977412881897026,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "routing": {
+            "mae": 0.00028434383421647167,
+            "rmse": 0.0004892604800648722,
+            "r2": 0.9987795000672256,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          }
+        }
+      }
+    },
+    "norm_pta": {
+      "feature_cols": [
+        "core_area",
+        "utilization",
+        "aspect_ratio",
+        "norm_p",
+        "norm_t",
+        "norm_a",
+        "hpwl",
+        "placement_density",
+        "estimated_congestion",
+        "inv_fmax",
+        "total_negative_slack",
+        "clock_skew",
+        "buffer_inverter_count",
+        "routed_wirelength",
+        "congestion",
+        "drc_violation_count",
+        "stage_id"
+      ],
+      "targets": {
+        "V_P": {
+          "floorplan": {
+            "mae": 0.015465477572175179,
+            "rmse": 0.032516120154931605,
+            "r2": 0.7734427651438534,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "placement": {
+            "mae": 0.014748862848969613,
+            "rmse": 0.0325275643408544,
+            "r2": 0.7732832615270341,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "cts": {
+            "mae": 0.014748862848969613,
+            "rmse": 0.0325275643408544,
+            "r2": 0.7732832615270341,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "routing": {
+            "mae": 0.014748862848969613,
+            "rmse": 0.0325275643408544,
+            "r2": 0.7732832615270341,
+            "baseline_mae": 0.06905752611461569,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          }
+        },
+        "V_T": {
+          "floorplan": {
+            "mae": 0.01602078365814812,
+            "rmse": 0.02491138660452407,
+            "r2": 0.519484665669109,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "placement": {
+            "mae": 0.010706719632269213,
+            "rmse": 0.02347697765679981,
+            "r2": 0.5732280950159732,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "cts": {
+            "mae": 0.010706719632269213,
+            "rmse": 0.02347697765679981,
+            "r2": 0.5732280950159732,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "routing": {
+            "mae": 0.010713764901281665,
+            "rmse": 0.023469253499333223,
+            "r2": 0.5735088731605651,
+            "baseline_mae": 0.03953614639171297,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          }
+        },
+        "V_A": {
+          "floorplan": {
+            "mae": 0.0006061373136221349,
+            "rmse": 0.0009967034647901398,
+            "r2": 0.9949348837007634,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "placement": {
+            "mae": 0.00047520982771622757,
+            "rmse": 0.00093651291293534,
+            "r2": 0.995528172673713,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "cts": {
+            "mae": 0.00047520982771622757,
+            "rmse": 0.00093651291293534,
+            "r2": 0.995528172673713,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          },
+          "routing": {
+            "mae": 0.00047520982771622757,
+            "rmse": 0.00093651291293534,
+            "r2": 0.995528172673713,
+            "baseline_mae": 0.02233481849592487,
+            "n_train_traj": 12,
+            "n_test_traj": 5,
+            "n_test_rows": 5
+          }
+        }
+      }
+    }
+  }
+}

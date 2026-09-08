@@ -1,0 +1,13 @@
+stage,target,ablation,removed_group,features_used,n_features,mae,rmse,r2,n_train,n_test,delta_r2
+routing,power,all,,"routed_wirelength,inv_fmax,total_negative_slack,congestion,drc_violation_count",5,0.00038856153103744855,0.0006561796183417015,0.9424449991809724,20,980,0.0
+routing,power,-congestion,congestion,"routed_wirelength,inv_fmax,total_negative_slack,drc_violation_count",4,0.00033434190813937847,0.000606391841801302,0.9508476495089385,20,980,-0.008402650327966166
+routing,power,-routing,routing,"inv_fmax,total_negative_slack,congestion",3,0.0005441890941791424,0.0008058115585385439,0.9132030276380151,20,980,0.029241971542957268
+routing,power,-timing,timing,"routed_wirelength,congestion,drc_violation_count",3,0.000812017115557414,0.0012542778862456355,0.789706852071655,20,980,0.15273814710931732
+routing,fmax,all,,"routed_wirelength,inv_fmax,total_negative_slack,congestion,drc_violation_count",5,16736163.004081633,28006964.017485846,0.9103787163735371,20,980,0.0
+routing,fmax,-congestion,congestion,"routed_wirelength,inv_fmax,total_negative_slack,drc_violation_count",4,16925963.624489795,28237238.305431645,0.9088989188269404,20,980,0.0014797975465966617
+routing,fmax,-routing,routing,"inv_fmax,total_negative_slack,congestion",3,10937687.73877551,15947684.267840821,0.9709414224747237,20,980,-0.060562706101186636
+routing,fmax,-timing,timing,"routed_wirelength,congestion,drc_violation_count",3,30187822.204081632,44206024.39974683,0.776724016422362,20,980,0.13365469995117507
+routing,area,all,,"routed_wirelength,inv_fmax,total_negative_slack,congestion,drc_violation_count",5,9.381939850227202,15.87693800976098,0.9829180710696186,20,980,0.0
+routing,area,-congestion,congestion,"routed_wirelength,inv_fmax,total_negative_slack,drc_violation_count",4,6.1133899050342775,12.782992878258662,0.98892691824712,20,980,-0.006008847177501386
+routing,area,-routing,routing,"inv_fmax,total_negative_slack,congestion",3,15.402531069136643,25.471749699155232,0.9560335936677247,20,980,0.026884477401893925
+routing,area,-timing,timing,"routed_wirelength,congestion,drc_violation_count",3,18.36314727957589,29.65292535337061,0.9404147863305199,20,980,0.0425032847390987

@@ -1,0 +1,17 @@
+stage,feature,mean_abs_shap,mean_shap
+cts,inv_fmax,1.2703415e+07,-2.6256102e+06
+cts,total_negative_slack,1.0047048e+07,-3.6265292e+06
+cts,clock_skew,2.3161002e+06,-418433.25
+cts,buffer_inverter_count,888344.56,-402978.66
+floorplan,utilization,2.3475264e+07,-8.493905e+06
+floorplan,aspect_ratio,0.0,0.0
+floorplan,core_area,0.0,0.0
+placement,hpwl,1.4159676e+07,-5.6155905e+06
+placement,placement_density,1.0531399e+07,-3.1163268e+06
+placement,estimated_congestion,1.6025869e+06,810687.8
+placement,inv_fmax,1.553723e+06,246116.52
+routing,routed_wirelength,1.9127792e+07,-6.00696e+06
+routing,inv_fmax,6.6465645e+06,1.04597394e+06
+routing,total_negative_slack,2.1187338e+06,-1.037369e+06
+routing,congestion,1.7529879e+06,551537.44
+routing,drc_violation_count,0.0,0.0

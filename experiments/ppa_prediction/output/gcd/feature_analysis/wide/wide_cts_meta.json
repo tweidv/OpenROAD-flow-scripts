@@ -1,0 +1,11 @@
+{
+  "stage": "cts",
+  "n_features": 44,
+  "feature_groups": {
+    "configuration": 6,
+    "cts": 38
+  },
+  "source_files": [
+    "4_1_cts.json"
+  ]
+}

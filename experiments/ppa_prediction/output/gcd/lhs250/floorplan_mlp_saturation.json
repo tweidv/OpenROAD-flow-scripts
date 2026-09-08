@@ -1,0 +1,146 @@
+[
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "power",
+    "model": "linear",
+    "r2": 0.4877329512603986,
+    "pearson": 0.7018561280801243,
+    "spearman": 0.895790791583361
+  },
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "power",
+    "model": "mlp",
+    "r2": 0.7325765336082775,
+    "pearson": 0.8633871305814217,
+    "spearman": 0.7837611015183282
+  },
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "area",
+    "model": "linear",
+    "r2": 0.4709406687135621,
+    "pearson": 0.6961711654319489,
+    "spearman": 0.7987363914927641
+  },
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "area",
+    "model": "mlp",
+    "r2": 0.724371140755079,
+    "pearson": 0.8653008599100908,
+    "spearman": 0.7276881490040423
+  },
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "wns",
+    "model": "linear",
+    "r2": 0.3150712145005943,
+    "pearson": 0.5746548330808102,
+    "spearman": 0.4517773980036983
+  },
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "wns",
+    "model": "mlp",
+    "r2": 0.5759627812313557,
+    "pearson": 0.782735673405423,
+    "spearman": 0.3800505818514969
+  },
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "tns",
+    "model": "linear",
+    "r2": 0.6574740591666476,
+    "pearson": 0.8206596655214705,
+    "spearman": 0.9345569359966486
+  },
+  {
+    "subset": "fclk",
+    "n_train": 200,
+    "target": "tns",
+    "model": "mlp",
+    "r2": 0.7499754705787951,
+    "pearson": 0.8688020339416751,
+    "spearman": 0.8329509211259698
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "power",
+    "model": "linear",
+    "r2": 0.8574734772381007,
+    "pearson": 0.9387118823555047,
+    "spearman": 0.9554130954277371
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "power",
+    "model": "mlp",
+    "r2": 0.6881921716241609,
+    "pearson": 0.8403337177774284,
+    "spearman": 0.8385315376135476
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "area",
+    "model": "linear",
+    "r2": 0.6511305736200079,
+    "pearson": 0.8266951674213283,
+    "spearman": 0.8988035498227411
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "area",
+    "model": "mlp",
+    "r2": 0.5858179218713864,
+    "pearson": 0.776379963593575,
+    "spearman": 0.8481924951176615
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "wns",
+    "model": "linear",
+    "r2": 0.9141503808231362,
+    "pearson": 0.9700679601664536,
+    "spearman": 0.9632635431775206
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "wns",
+    "model": "mlp",
+    "r2": 0.7912078652955032,
+    "pearson": 0.914170951279058,
+    "spearman": 0.9009316184033832
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "tns",
+    "model": "linear",
+    "r2": 0.7195753126614437,
+    "pearson": 0.8614904610318627,
+    "spearman": 0.915609044478805
+  },
+  {
+    "subset": "lhs",
+    "n_train": 250,
+    "target": "tns",
+    "model": "mlp",
+    "r2": 0.7176954540877196,
+    "pearson": 0.8537905972929541,
+    "spearman": 0.8634139896788253
+  }
+]

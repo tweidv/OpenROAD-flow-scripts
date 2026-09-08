@@ -1,0 +1,4 @@
+stage,target,ablation,removed_group,features_used,n_features,mae,rmse,r2,n_train,n_test,delta_r2
+floorplan,power,all,,"core_area,utilization,aspect_ratio",3,0.0005995206096207791,0.0010138855467007395,0.862590912559309,20,980,0.0
+floorplan,fmax,all,,"core_area,utilization,aspect_ratio",3,43587595.26530612,60002223.245496035,0.5886478438769782,20,980,0.0
+floorplan,area,all,,"core_area,utilization,aspect_ratio",3,25.874756018315534,40.906082419875354,0.8866088419990386,20,980,0.0

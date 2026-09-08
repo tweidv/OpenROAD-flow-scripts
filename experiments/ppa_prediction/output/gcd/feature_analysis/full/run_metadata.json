@@ -1,0 +1,20 @@
+{
+  "mode": "full_orfs_metrics",
+  "design": "gcd",
+  "limit": 1000,
+  "train_size": 20,
+  "n_train": 20,
+  "n_test": 980,
+  "stage_features": {
+    "floorplan": 27,
+    "placement": 95,
+    "cts": 44,
+    "routing": 67
+  },
+  "model_counts": {
+    "shap": 12,
+    "group_ablation": 45,
+    "individual_ablation": 699,
+    "total_fits": 756
+  }
+}

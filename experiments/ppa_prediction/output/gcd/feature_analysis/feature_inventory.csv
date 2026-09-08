@@ -1,0 +1,17 @@
+feature,stage_available,feature_group,dtype,missing_fraction,n_unique,description
+aspect_ratio,floorplan,floorplan,float,0.0,11,CORE_ASPECT_RATIO param (+ die/core area proxy)
+buffer_inverter_count,cts,cts,float,0.0,14,setup + hold buffer/inverter count after CTS
+clock_skew,cts,cts,float,0.0,73,cts__clock__skew__setup
+congestion,routing,congestion,float,0.0,73,GPL routability congestion (GP aux at route)
+core_area,floorplan,floorplan,float,0.0,9,floorplan__design__core__area
+drc_violation_count,routing,routing,float,0.0,1,detailedroute__route__drc_errors
+estimated_congestion,placement,congestion,float,0.0,73,globalplace__gpl__routability__congestion (GP aux)
+hpwl,placement,placement,float,0.0,72,detailedplace__route__wirelength__estimated
+inv_fmax,cts,timing,float,0.0,72,1/fmax at stage checkpoint (seconds)
+inv_fmax,placement,timing,float,0.0,73,1/fmax at stage checkpoint (seconds)
+inv_fmax,routing,timing,float,0.0,71,1/fmax at stage checkpoint (seconds)
+placement_density,placement,placement,float,0.0,60,detailedplace__design__instance__utilization
+routed_wirelength,routing,routing,float,0.0,70,detailedroute__route__wirelength
+total_negative_slack,cts,timing,float,0.0,55,setup TNS at stage checkpoint
+total_negative_slack,routing,timing,float,0.0,57,setup TNS at stage checkpoint
+utilization,floorplan,floorplan,float,0.0,23,floorplan__design__instance__utilization

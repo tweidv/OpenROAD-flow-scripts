@@ -1,0 +1,278 @@
+{
+  "targets": {
+    "source": "best_of_batch",
+    "P_target": 0.00185873,
+    "T_target": 2444070000.0,
+    "A_target": 674.842,
+    "best_P_trajectory": "traj_bad_03",
+    "best_T_trajectory": "traj_small_04",
+    "best_A_trajectory": "traj_bad_03",
+    "n_feasible_runs": 74
+  },
+  "experiments": {
+    "structural_only": {
+      "feature_cols": [
+        "core_area",
+        "utilization",
+        "aspect_ratio",
+        "hpwl",
+        "placement_density",
+        "estimated_congestion",
+        "inv_fmax",
+        "total_negative_slack",
+        "clock_skew",
+        "buffer_inverter_count",
+        "routed_wirelength",
+        "congestion",
+        "drc_violation_count",
+        "stage_id"
+      ],
+      "models": {
+        "combined": {
+          "mae": 0.02524865740808567,
+          "rmse": 0.052738424937178716,
+          "r2": 0.7390599357237904,
+          "baseline_mae": 0.08933846012760221,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 220,
+          "n_test_rows": 76
+        },
+        "floorplan": {
+          "mae": 0.05281481050783133,
+          "rmse": 0.09582628881424372,
+          "r2": 0.13849898664629612,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "placement": {
+          "mae": 0.01358292739560309,
+          "rmse": 0.023404498416330112,
+          "r2": 0.9486092292804301,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "cts": {
+          "mae": 0.010828404195325048,
+          "rmse": 0.01736932429152919,
+          "r2": 0.9716957076084459,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "routing": {
+          "mae": 0.007468638534562401,
+          "rmse": 0.011496345883569204,
+          "r2": 0.9876004450381651,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        }
+      }
+    },
+    "structural_pure": {
+      "feature_cols": [
+        "core_area",
+        "utilization",
+        "aspect_ratio",
+        "hpwl",
+        "placement_density",
+        "estimated_congestion",
+        "total_negative_slack",
+        "clock_skew",
+        "buffer_inverter_count",
+        "routed_wirelength",
+        "congestion",
+        "drc_violation_count",
+        "stage_id"
+      ],
+      "models": {
+        "combined": {
+          "mae": 0.020115222842586423,
+          "rmse": 0.04547602987484413,
+          "r2": 0.8059777481087919,
+          "baseline_mae": 0.08933846012760221,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 220,
+          "n_test_rows": 76
+        },
+        "floorplan": {
+          "mae": 0.050825922720966095,
+          "rmse": 0.09188320792640867,
+          "r2": 0.20793877463224786,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "placement": {
+          "mae": 0.009608679940958556,
+          "rmse": 0.015089484224142288,
+          "r2": 0.9786383278546525,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "cts": {
+          "mae": 0.009359760127571051,
+          "rmse": 0.016379062431984184,
+          "r2": 0.9748310828453138,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "routing": {
+          "mae": 0.005476627279477298,
+          "rmse": 0.008944249317768434,
+          "r2": 0.9924945930051582,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        }
+      }
+    },
+    "norm_pta": {
+      "feature_cols": [
+        "core_area",
+        "utilization",
+        "aspect_ratio",
+        "norm_p",
+        "norm_t",
+        "norm_a",
+        "hpwl",
+        "placement_density",
+        "estimated_congestion",
+        "inv_fmax",
+        "total_negative_slack",
+        "clock_skew",
+        "buffer_inverter_count",
+        "routed_wirelength",
+        "congestion",
+        "drc_violation_count",
+        "stage_id"
+      ],
+      "models": {
+        "combined": {
+          "mae": 0.008699857682648152,
+          "rmse": 0.014309947495460494,
+          "r2": 0.9807884442587302,
+          "baseline_mae": 0.08933846012760221,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 220,
+          "n_test_rows": 76
+        },
+        "floorplan": {
+          "mae": 0.025415503424932106,
+          "rmse": 0.056754712099834424,
+          "r2": 0.6978028915166499,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "placement": {
+          "mae": 0.010519098954741492,
+          "rmse": 0.018048419628404998,
+          "r2": 0.9694391932751313,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "cts": {
+          "mae": 0.007075025451554234,
+          "rmse": 0.010997732233224049,
+          "r2": 0.9886526947548151,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        },
+        "routing": {
+          "mae": 0.0065672844285140876,
+          "rmse": 0.013770303467577136,
+          "r2": 0.9822101012160179,
+          "baseline_mae": 0.08933846012760241,
+          "n_train_traj": 55,
+          "n_test_traj": 19,
+          "n_train_rows": 55,
+          "n_test_rows": 19
+        }
+      }
+    }
+  },
+  "models": {
+    "combined": {
+      "mae": 0.02524865740808567,
+      "rmse": 0.052738424937178716,
+      "r2": 0.7390599357237904,
+      "baseline_mae": 0.08933846012760221,
+      "n_train_traj": 55,
+      "n_test_traj": 19,
+      "n_train_rows": 220,
+      "n_test_rows": 76
+    },
+    "floorplan": {
+      "mae": 0.05281481050783133,
+      "rmse": 0.09582628881424372,
+      "r2": 0.13849898664629612,
+      "baseline_mae": 0.08933846012760241,
+      "n_train_traj": 55,
+      "n_test_traj": 19,
+      "n_train_rows": 55,
+      "n_test_rows": 19
+    },
+    "placement": {
+      "mae": 0.01358292739560309,
+      "rmse": 0.023404498416330112,
+      "r2": 0.9486092292804301,
+      "baseline_mae": 0.08933846012760241,
+      "n_train_traj": 55,
+      "n_test_traj": 19,
+      "n_train_rows": 55,
+      "n_test_rows": 19
+    },
+    "cts": {
+      "mae": 0.010828404195325048,
+      "rmse": 0.01736932429152919,
+      "r2": 0.9716957076084459,
+      "baseline_mae": 0.08933846012760241,
+      "n_train_traj": 55,
+      "n_test_traj": 19,
+      "n_train_rows": 55,
+      "n_test_rows": 19
+    },
+    "routing": {
+      "mae": 0.007468638534562401,
+      "rmse": 0.011496345883569204,
+      "r2": 0.9876004450381651,
+      "baseline_mae": 0.08933846012760241,
+      "n_train_traj": 55,
+      "n_test_traj": 19,
+      "n_train_rows": 55,
+      "n_test_rows": 19
+    }
+  }
+}

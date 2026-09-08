@@ -1,0 +1,10 @@
+{
+  "source": "best_of_batch",
+  "P_target": 0.0137738,
+  "T_target": 603495000.0,
+  "A_target": 28384.9,
+  "best_P_trajectory": "ibex_large_01",
+  "best_T_trajectory": "ibex_bad_01",
+  "best_A_trajectory": "ibex_large_01",
+  "n_feasible_runs": 15
+}

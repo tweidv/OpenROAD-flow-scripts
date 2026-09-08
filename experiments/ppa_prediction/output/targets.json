@@ -1,0 +1,10 @@
+{
+  "source": "best_of_batch",
+  "P_target": 0.00185873,
+  "T_target": 2444070000.0,
+  "A_target": 674.842,
+  "best_P_trajectory": "traj_bad_03",
+  "best_T_trajectory": "traj_small_04",
+  "best_A_trajectory": "traj_bad_03",
+  "n_feasible_runs": 74
+}

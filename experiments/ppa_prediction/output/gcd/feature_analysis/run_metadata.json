@@ -1,0 +1,22 @@
+{
+  "design": "gcd",
+  "limit": 1000,
+  "train_size": 20,
+  "n_train": 20,
+  "n_test": 980,
+  "model_params": {
+    "n_estimators": 80,
+    "max_depth": 4,
+    "learning_rate": 0.1,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "random_state": 42,
+    "objective": "reg:squarederror"
+  },
+  "model_counts": {
+    "shap": 12,
+    "group_ablation": 39,
+    "individual_ablation": 48,
+    "total_fits": 99
+  }
+}

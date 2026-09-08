@@ -1,0 +1,6 @@
+feature,mean_abs_shap,mean_shap,rank
+routed_wirelength,67.9217,-33.885616,1
+total_negative_slack,46.06813,-14.653717,2
+inv_fmax,3.8405561,1.3276182,3
+congestion,0.9177943,0.2593043,4
+drc_violation_count,0.0,0.0,5

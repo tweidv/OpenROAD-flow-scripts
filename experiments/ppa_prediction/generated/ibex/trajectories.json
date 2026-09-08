@@ -1,0 +1,254 @@
+[
+  {
+    "trajectory_id": "ibex_default",
+    "tier": "default",
+    "params": {
+      "CORE_UTILIZATION": 50,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.2,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_001",
+    "tier": "pilot",
+    "params": {
+      "CORE_UTILIZATION": 45,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.5,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_small_01",
+    "tier": "small",
+    "params": {
+      "CORE_UTILIZATION": 45,
+      "PLACE_DENSITY_LB_ADDON": 0.15,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.2,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_small_02",
+    "tier": "small",
+    "params": {
+      "CORE_UTILIZATION": 55,
+      "PLACE_DENSITY_LB_ADDON": 0.25,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.2,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_small_03",
+    "tier": "small",
+    "params": {
+      "CORE_UTILIZATION": 50,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 40,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.5,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_medium_01",
+    "tier": "medium",
+    "params": {
+      "CORE_UTILIZATION": 42,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.8,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_medium_02",
+    "tier": "medium",
+    "params": {
+      "CORE_UTILIZATION": 58,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.0,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_large_01",
+    "tier": "large",
+    "params": {
+      "CORE_UTILIZATION": 38,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 3.5,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_bad_01",
+    "tier": "bad",
+    "params": {
+      "CORE_UTILIZATION": 65,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 1.8,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_002",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 45,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.0,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_003",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 45,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.2,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_004",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 45,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.5,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_005",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 50,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.0,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_006",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 50,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.2,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_007",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 50,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.5,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_008",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 55,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.0,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_009",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 55,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.2,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  },
+  {
+    "trajectory_id": "ibex_sweep_010",
+    "tier": "sweep",
+    "params": {
+      "CORE_UTILIZATION": 55,
+      "PLACE_DENSITY_LB_ADDON": 0.2,
+      "CORE_ASPECT_RATIO": 1.0,
+      "CTS_CLUSTER_SIZE": 50,
+      "TNS_END_PERCENT": 100,
+      "CLK_PERIOD": 2.5,
+      "CELL_PAD_IN_SITES_GLOBAL_PLACEMENT": 0,
+      "CELL_PAD_IN_SITES_DETAIL_PLACEMENT": 0
+    }
+  }
+]

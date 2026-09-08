@@ -1,0 +1,47 @@
+Building wide feature tables from existing JSON logs (no new OR runs)...
+floorplan: 27 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_floorplan.csv
+placement: 95 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_placement.csv
+cts: 44 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_cts.csv
+routing: 67 features → /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/wide/wide_routing.csv
+
+=== Full metrics analysis scope ===
+  floorplan: 27 features, 2 groups
+  placement: 95 features, 4 groups
+  cts: 44 features, 2 groups
+  routing: 67 features, 3 groups
+{
+  "shap": 12,
+  "group_ablation": 45,
+  "individual_ablation": 699,
+  "total_fits": 756
+}
+
+[floorplan] 27 features, SHAP...
+  → power
+  → fmax
+  → area
+[floorplan] group ablation...
+[floorplan] individual ablation (27 features)...
+
+[placement] 95 features, SHAP...
+  → power
+  → fmax
+  → area
+[placement] group ablation...
+[placement] individual ablation (95 features)...
+
+[cts] 44 features, SHAP...
+  → power
+  → fmax
+  → area
+[cts] group ablation...
+[cts] individual ablation (44 features)...
+
+[routing] 67 features, SHAP...
+  → power
+  → fmax
+  → area
+[routing] group ablation...
+[routing] individual ablation (67 features)...
+
+Done. Outputs in /data/projects/openroad-exploration/experiments/ppa_prediction/output/gcd/feature_analysis/full

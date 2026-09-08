@@ -1,0 +1,14 @@
+include /data/projects/openroad-exploration/flow/designs/nangate45/gcd/config.mk
+export SDC_FILE = /data/projects/openroad-exploration/experiments/ppa_prediction/generated/gcd/sdc/traj_fclk2_007.sdc
+export CORE_UTILIZATION ?= 54
+export PLACE_DENSITY_LB_ADDON = 0.08
+export CORE_ASPECT_RATIO = 1.11
+export CTS_CLUSTER_SIZE = 86
+export TNS_END_PERCENT = 66
+export CELL_PAD_IN_SITES_GLOBAL_PLACEMENT = 1
+export CORE_MARGIN = 1.1
+export CTS_CLUSTER_DIAMETER = 109
+export SETUP_SLACK_MARGIN = -0.0046
+export ROUTING_LAYER_ADJUSTMENT = 0.43
+export GPL_RANDOM_SEED = 50175
+export GRT_SEED = 96597
