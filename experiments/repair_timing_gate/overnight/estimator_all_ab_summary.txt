@@ -1,0 +1,14 @@
+gcd              greedy WNS   -0.16 TNS    -6.88 area  +9.3% up=  79 buf=  10 t=   4.58s mode0=      mode=      hops=0 stall=False hard=False  swap=13 clone=1
+gcd              est    WNS   -0.16 TNS    -6.96 area  +0.8% up=   9 buf=   0 t=   0.88s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=1025 sta=0 commit=139 ovr=15 est=139 lv=1 contest=1025 direct=0 swap=8 clone=0  dWNS=+0.0ps vs greedy
+aes_p065         greedy WNS   -0.12 TNS   -17.74 area  +6.3% up= 862 buf= 469 t= 107.54s mode0=      mode=      hops=0 stall=False hard=False  swap=255 clone=42
+aes_p065         est    WNS   -0.16 TNS   -21.77 area  +0.3% up=  57 buf=   3 t=   6.55s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=729 sta=0 commit=166 ovr=43 est=160 lv=1 contest=727 direct=0 swap=37 clone=12  dWNS=-40.0ps vs greedy
+ibex_pack002     greedy WNS   -0.38 TNS   -569.4 area  +0.3% up=  53 buf=  31 t= 130.96s mode0=      mode=      hops=0 stall=False hard=False  swap=15 clone=3
+ibex_pack002     est    WNS   -0.38 TNS  -541.23 area  +0.2% up=  69 buf=   0 t=  32.48s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=1074 sta=0 commit=225 ovr=37 est=220 lv=1 contest=1074 direct=0 swap=36 clone=6  dWNS=+0.0ps vs greedy
+ibex_pack010     greedy WNS   -0.23 TNS  -322.34 area  +0.7% up= 105 buf=  62 t= 108.15s mode0=      mode=      hops=0 stall=False hard=False  swap=76 clone=5
+ibex_pack010     est    WNS   -0.25 TNS  -335.83 area  +0.3% up=  69 buf=   3 t=  29.07s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=2009 sta=0 commit=238 ovr=32 est=226 lv=1 contest=2007 direct=0 swap=44 clone=10  dWNS=-20.0ps vs greedy
+ibex_pack012     greedy WNS   -0.23 TNS   -231.2 area  +1.4% up= 243 buf=  67 t= 323.54s mode0=      mode=      hops=0 stall=False hard=False  swap=52 clone=13
+ibex_pack012     est    WNS   -0.23 TNS  -315.96 area  +0.3% up=  74 buf=   2 t=  37.96s mode0=tail  mode=tail  hops=2 stall=True hard=True  eval=2131 sta=0 commit=267 ovr=30 est=250 lv=1 contest=2131 direct=0 swap=39 clone=7  dWNS=+0.0ps vs greedy
+ibex_pack013     greedy WNS   -0.24 TNS  -326.32 area  +0.5% up= 107 buf=  35 t= 189.93s mode0=      mode=      hops=0 stall=False hard=False  swap=53 clone=2
+ibex_pack013     est    WNS   -0.28 TNS  -338.77 area  +0.4% up= 104 buf=   6 t=  41.26s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=2825 sta=0 commit=295 ovr=35 est=280 lv=1 contest=2823 direct=0 swap=48 clone=9  dWNS=-40.0ps vs greedy
+jpeg             greedy WNS   -0.09 TNS   -38.34 area  +0.4% up= 396 buf=  66 t= 135.96s mode0=      mode=      hops=0 stall=False hard=False  swap=188 clone=1
+jpeg             est    WNS   -0.14 TNS   -57.08 area  +0.0% up=   2 buf=   0 t=  27.06s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=746 sta=0 commit=150 ovr=28 est=148 lv=1 contest=746 direct=0 swap=0 clone=0  dWNS=-50.0ps vs greedy

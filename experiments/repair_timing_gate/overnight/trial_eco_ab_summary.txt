@@ -1,0 +1,5 @@
+ibex_pack002     champ  WNS   -0.34 TNS  -410.16 area  +0.7% up= 187 buf=  64 t= 507.03s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=4521 sta=2022 commit=330 ovr=38 swap=89 clone=4
+ibex_pack002     keep   WNS   -0.34 TNS  -412.39 area  +0.7% up= 189 buf=  64 t=  243.5s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=1963 sta=1996 commit=330 ovr=38 swap=87 clone=4 keep_winner
+ibex_pack002     inv    WNS   -0.34 TNS  -412.39 area  +0.7% up= 189 buf=  64 t= 258.39s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=1963 sta=1996 commit=330 ovr=38 swap=87 clone=4 inverse_undo
+ibex_pack002     one    WNS   -0.34 TNS  -406.35 area  +0.8% up= 196 buf=  59 t= 288.74s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=2053 sta=2092 commit=350 ovr=49 swap=102 clone=4 one_sta
+ibex_pack002     skip   WNS   -0.35 TNS  -424.31 area  +0.7% up= 176 buf=  57 t= 220.83s mode0=tail  mode=tail  hops=0 stall=True hard=True  eval=1689 sta=1793 commit=295 ovr=34 swap=73 clone=3 skip_restore_sta
